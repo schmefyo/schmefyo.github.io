@@ -9,7 +9,8 @@ body {
 
 @font-face {
     font-family: "futura-pt";
-    url("https://schmefyo.github.io/futura-pt.otf") format("opentype");
+    src: url("https://schmefyo.github.io/futura-pt.otf") format("opentype");
+    font-weight: 700;
 }
 
 #content {
