@@ -8,8 +8,9 @@ body {
 }
 
 @font-face {
-    font-family: "futura-pt";
-    src: url("https://schmefyo.github.io/futura-pt.otf") format("opentype");
+    font-family: "futur-demi";
+    src: url("https://schmefyo.github.io/futur-demi.otf") format("opentype");
+    
 }
 
 #content {
@@ -27,7 +28,7 @@ body {
 #name {
     display: inline-block;
     font-size: 57px;
-    font-family: "futura-pt", 'Futura', 'Hind', sans-serif;
+    font-family: "futur-demi", 'Futura', 'Hind', sans-serif;
     line-height: 1em;
     margin-top: 0;
     margin-bottom: 0;
