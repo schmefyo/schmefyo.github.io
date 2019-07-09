@@ -22,11 +22,11 @@ body {
 #name {
     display: inline-block;
     font-size: 57px;
-    font-family: 'Futura', 'Hind', sans-serif;
+    font-family: 'futura-pt','Futura', 'Hind', sans-serif;
     line-height: 1em;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 800;
+    font-weight: 700;
     font-style: normal;
     text-transform: none;
     letter-spacing: -.02em;
