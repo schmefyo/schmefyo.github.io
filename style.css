@@ -34,7 +34,7 @@ body {
     margin-bottom: 0;
     font-style: normal;
     text-transform: none;
-    /* letter-spacing: -.02em; */
+    letter-spacing: .01em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     margin-bottom: 10px;
