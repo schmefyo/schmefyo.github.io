@@ -7,6 +7,11 @@ body {
     background: #adca6d;
 }
 
+@font-face {
+    font-family: "futura-pt";
+    url("https://schmefyo.github.io/futura-pt.otf") format("opentype");
+}
+
 #content {
     position: relative;
     height: 100%;
@@ -22,7 +27,7 @@ body {
 #name {
     display: inline-block;
     font-size: 57px;
-    font-family: 'Futura Medium', 'Futura', 'Hind', sans-serif;
+    font-family: "futura-pt", 'Futura', 'Hind', sans-serif;
     line-height: 1em;
     margin-top: 0;
     margin-bottom: 0;
