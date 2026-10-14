@@ -1,51 +1,62 @@
-/* Palette: cream paper, deep ink, and the original lime as the accent.
-   Lime is used for fills and stripes, never for body text on cream (too low contrast). */
+/* Palette lifted from Flowcrate's landing page (hex versions of its oklch values):
+   warm near-black, cream, and one hot coral accent. Coral is the only bright color,
+   so it only appears where something is clickable or important. */
 :root {
-    --paper: #f6f0e2;
-    --ink: #1d2b1f;
-    --ink-soft: #46534a;
-    --lime: #adca6d;
-    --leaf: #4a6a1f;      /* readable green for small text on paper */
-    --rule: rgba(29, 43, 31, 0.35);
-}
+    --ink: #070505;        /* oklch(0.12 0.004 40) */
+    --ink-2: #0e0c0b;      /* oklch(0.155 0.005 40) */
+    --paper: #eeeae5;      /* oklch(0.94 0.008 75) */
+    --soft: #cfcac5;       /* paper, a step quieter, for body copy */
+    --dim: #97918c;        /* oklch(0.66 0.01 60) */
+    --faint: #514c49;      /* oklch(0.42 0.008 50) */
+    --rule: #292624;       /* oklch(0.27 0.006 45) */
+    --coral: #ff6050;      /* oklch(0.7 0.2 29) */
+    --coral-ink: #100605;  /* text that sits on coral */
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --paper: #17211a;
-        --ink: #f3ecda;
-        --ink-soft: #b9c2b4;
-        --leaf: #adca6d;
-        --rule: rgba(243, 236, 218, 0.35);
-    }
-}
-
-@font-face {
-    font-family: "futur-demi";
-    src: url("futur-demi.otf") format("opentype");
-    font-display: swap;
+    --display: "Archivo", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+    --serif: "Fraunces", Georgia, serif;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 * { box-sizing: border-box; }
 
 html {
-    font-family: 'Hind', 'Avenir', 'Nunito', system-ui, sans-serif;
-    color: var(--ink);
-    background: var(--paper);
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--display);
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    color-scheme: dark;
 }
 
 body {
     margin: 0;
-    background: var(--paper);
+    background: var(--ink);
     font-size: 17px;
     line-height: 1.55;
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    overflow-x: clip;
 }
 
-/* Bar awning: lime and paper stripes across the top */
+/* Print-style grain, same trick as Flowcrate, so the black reads as paper not a flat screen */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection { background: var(--coral); color: var(--coral-ink); }
+
+/* Bar awning: coral and black stripes across the top */
 .awning {
     height: 34px;
-    background: repeating-linear-gradient(90deg, var(--lime) 0 44px, var(--paper) 44px 88px);
-    border-bottom: 3px solid var(--ink);
+    background: repeating-linear-gradient(90deg, var(--coral) 0 44px, var(--ink-2) 44px 88px);
+    border-bottom: 2px solid var(--coral);
 }
 
 .menu {
@@ -57,73 +68,79 @@ body {
 /* ---------- Masthead ---------- */
 .masthead { text-align: center; margin-bottom: 56px; }
 
-.glass { color: var(--ink); margin-bottom: 8px; }
+.glass { color: var(--paper); margin-bottom: 10px; }
 
 .eyebrow {
-    margin: 0 0 12px;
-    font-size: 13px;
-    font-weight: 600;
+    margin: 0 0 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--leaf);
+    color: var(--coral);
 }
 
 h1 {
-    font-family: "futur-demi", 'Futura', 'Hind', sans-serif;
-    font-weight: normal;
-    font-size: clamp(44px, 10vw, 84px);
-    line-height: 0.98;
-    letter-spacing: -0.01em;
-    margin: 0 0 18px;
-    color: var(--ink);
+    margin: 0 0 22px;
+    font-family: var(--display);
+    font-stretch: 125%;
+    font-weight: 800;
+    font-size: clamp(44px, 12vw, 88px);
+    line-height: 0.88;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    text-wrap: balance;
+    color: var(--paper);
 }
 
 .subtitle {
     margin: 0 0 20px;
     font-size: 18px;
     font-weight: 600;
-    color: var(--ink);
+    line-height: 1.4;
+    color: var(--paper);
 }
-.subtitle .bar { color: var(--leaf); padding: 0 0.35em; }
+.subtitle .bar { color: var(--coral); padding: 0 0.35em; }
 
 .welcome {
     margin: 0;
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: var(--serif);
     font-style: italic;
     font-size: 20px;
-    color: var(--ink-soft);
+    color: var(--dim);
 }
 
 /* ---------- Courses ---------- */
-.course { margin-bottom: 48px; }
+.course { margin-bottom: 52px; }
 
 .course-title {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin: 0 0 22px;
-    font-family: "futur-demi", 'Futura', 'Hind', sans-serif;
-    font-weight: normal;
-    font-size: 15px;
+    margin: 0 0 24px;
+    font-family: var(--display);
+    font-stretch: 125%;
+    font-weight: 800;
+    font-size: 13px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--ink);
+    color: var(--paper);
 }
 .course-title::before,
 .course-title::after {
     content: "";
     flex: 1;
-    border-top: 2px solid var(--ink);
-    border-bottom: 1px solid var(--ink);
     height: 5px;
+    border-top: 2px solid var(--faint);
+    border-bottom: 1px solid var(--faint);
 }
 
 .course-sub {
-    margin: -10px 0 22px;
+    margin: -12px 0 24px;
     text-align: center;
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: var(--serif);
     font-style: italic;
-    color: var(--ink-soft);
+    color: var(--dim);
 }
 
 /* ---------- Drinks ---------- */
@@ -132,138 +149,199 @@ h1 {
     align-items: baseline;
     gap: 10px;
     margin: 0 0 6px;
-    font-family: "futur-demi", 'Futura', 'Hind', sans-serif;
-    font-weight: normal;
-    font-size: 26px;
+    font-family: var(--display);
+    font-stretch: 112%;
+    font-weight: 700;
+    font-size: 25px;
     line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--paper);
 }
 
 .drink .leader {
     flex: 1;
     min-width: 20px;
-    border-bottom: 2px dotted var(--rule);
+    border-bottom: 2px dotted var(--faint);
     transform: translateY(-5px);
     transition: border-color 0.25s;
 }
 
 .drink .tag {
-    font-family: 'Hind', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--leaf);
+    color: var(--coral);
     white-space: nowrap;
 }
 
 .note {
     margin: 0 0 10px;
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: var(--serif);
     font-style: italic;
     font-size: 18px;
     line-height: 1.5;
-    color: var(--ink);
+    color: var(--soft);
 }
 
 .ingredients {
     margin: 0;
     font-size: 14px;
-    color: var(--ink-soft);
+    color: var(--dim);
 }
 .ingredients .label {
     display: inline-block;
     margin-right: 8px;
+    font-family: var(--mono);
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--leaf);
+    color: var(--coral);
 }
 
-/* House special sits on a lime card so it reads as the star */
-.drink.feature {
-    background: var(--lime);
-    color: #1d2b1f;
-    padding: 24px 26px;
-    border: 2px solid #1d2b1f;
-    box-shadow: 6px 6px 0 #1d2b1f;
-}
-.drink.feature .tag,
-.drink.feature .ingredients,
-.drink.feature .ingredients .label { color: #1d2b1f; }
-.drink.feature .note { color: #1d2b1f; }
-.drink.feature .leader { border-bottom-color: rgba(29, 43, 31, 0.5); }
-
-.cta { margin: 14px 0 0; }
+.cta { margin: 16px 0 0; }
 .cta a {
-    color: #1d2b1f;
+    color: var(--paper);
     font-weight: 700;
     text-decoration: none;
-    border-bottom: 2px solid #1d2b1f;
+    border-bottom: 2px solid var(--coral);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
 }
-.cta a:hover { border-bottom-color: transparent; }
+.cta a:hover { color: var(--coral); border-bottom-color: var(--paper); }
 
-/* Back bar grid */
-.backbar {
+/* ---------- Flowcrate: the seasonal special gets the star treatment ---------- */
+.drink.flow {
+    padding: 26px 26px 28px;
+    background: var(--ink-2);
+    border: 2px solid var(--coral);
+    box-shadow: 6px 6px 0 var(--coral);
+}
+.drink.flow h3 { font-size: 30px; }
+
+.tagline {
+    margin: 0 0 18px;
+    font-family: var(--display);
+    font-stretch: 110%;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--paper);
+}
+
+.shot {
+    display: block;
+    margin: 0 0 20px;
+    border: 1px solid var(--rule);
+    line-height: 0;
+    overflow: hidden;
+}
+.shot img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-out;
+}
+
+.sub {
+    margin: 26px 0 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--coral);
+}
+
+.work {
+    margin: 0 0 22px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 26px 36px;
+    gap: 20px 28px;
 }
-.drink.small h3 { font-size: 21px; margin-bottom: 4px; }
-.drink.small .note { font-size: 16px; margin: 0; }
+.work div { border-top: 1px solid var(--rule); padding-top: 10px; }
+.work dt {
+    margin: 0 0 4px;
+    font-family: var(--display);
+    font-stretch: 112%;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--paper);
+}
+.work dd {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--soft);
+}
 
 /* ---------- Last call ---------- */
 .last-call { text-align: center; }
-.last-call .note { font-size: 20px; margin-bottom: 20px; }
+.last-call .note { font-size: 20px; margin-bottom: 22px; }
+.last-call p { margin-top: 0; }
 
 .button {
     display: inline-block;
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--coral);
+    color: var(--coral-ink);
     text-decoration: none;
-    font-weight: 700;
+    font-family: var(--display);
+    font-stretch: 112%;
+    font-weight: 800;
     font-size: 14px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 16px 30px;
-    border: 2px solid var(--ink);
+    padding: 16px 32px;
+    border: 2px solid var(--coral);
     transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 .button:hover,
 .button:focus-visible {
-    background: var(--lime);
-    color: #1d2b1f;
+    background: var(--paper);
+    border-color: var(--paper);
     transform: translateY(-2px);
 }
 
 .links {
-    margin-top: 26px;
+    margin-top: 28px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px 28px;
 }
 .links a {
-    color: var(--ink);
+    color: var(--paper);
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 2px solid var(--lime);
+    border-bottom: 2px solid var(--coral);
     padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
 }
-.links a:hover { border-bottom-color: var(--ink); }
+.links a:hover { color: var(--coral); border-bottom-color: var(--paper); }
 
 .foot {
     margin-top: 56px;
     padding-top: 20px;
     border-top: 1px solid var(--rule);
     text-align: center;
-    font-size: 13px;
-    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--dim);
 }
 .foot p { margin: 0; }
 
+/* ---------- Back bar grid ---------- */
+.backbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 36px;
+}
+.drink.small h3 { font-size: 20px; margin-bottom: 4px; }
+.drink.small .note { font-size: 16px; margin: 0; }
+
 a:focus-visible {
-    outline: 3px solid var(--ink);
+    outline: 2px solid var(--coral);
     outline-offset: 3px;
 }
 
@@ -283,10 +361,12 @@ a:focus-visible {
     .course:nth-of-type(2) { animation-delay: 0.45s; }
     .course:nth-of-type(3) { animation-delay: 0.55s; }
     .course:nth-of-type(4) { animation-delay: 0.65s; }
+    .course:nth-of-type(5) { animation-delay: 0.75s; }
 
-    .drink:not(.feature):hover .leader { border-bottom-color: var(--leaf); }
-    .drink.feature { transition: transform 0.2s, box-shadow 0.2s; }
-    .drink.feature:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 #1d2b1f; }
+    .drink:not(.flow):hover .leader { border-bottom-color: var(--coral); }
+    .drink.flow { transition: transform 0.2s, box-shadow 0.2s; }
+    .drink.flow:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--coral); }
+    .shot:hover img { transform: scale(1.03); }
 }
 
 @keyframes rise {
@@ -297,9 +377,11 @@ a:focus-visible {
 @media (max-width: 560px) {
     body { font-size: 16px; }
     .menu { padding: 40px 20px 32px; }
-    .drink h3 { flex-wrap: wrap; font-size: 23px; }
+    .drink h3 { flex-wrap: wrap; font-size: 22px; }
     .drink .leader { display: none; }
     .drink .tag { flex-basis: 100%; }
-    .drink.feature { padding: 20px 18px; box-shadow: 4px 4px 0 #1d2b1f; }
+    .drink.flow { padding: 20px 18px 22px; box-shadow: 4px 4px 0 var(--coral); }
+    .drink.flow h3 { font-size: 26px; }
+    .work { grid-template-columns: 1fr; gap: 16px; }
     .backbar { grid-template-columns: 1fr; gap: 20px; }
 }
