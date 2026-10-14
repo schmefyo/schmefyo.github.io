@@ -191,11 +191,11 @@ a { color: inherit; }
     display: flex;
     justify-content: space-between;
     gap: 6px;
-    padding: 8px 0;
-    margin-bottom: clamp(32px, 4vw, 52px);
+    padding: 14px 0;
+    margin-bottom: clamp(36px, 5vw, 60px);
     border-block: 1.5px solid var(--ink);
 }
-.rail svg { width: 30px; height: auto; flex: none; color: var(--ink); }
+.rail svg { width: 100%; max-width: 60px; height: auto; color: var(--ink); }
 .ink .rail { border-color: var(--on-ink); }
 
 /* ---------- drink cards ---------- */
@@ -214,9 +214,28 @@ a { color: inherit; }
     background: var(--paper-lit);
 }
 .ink .art { background: transparent; border-color: var(--on-ink); }
-.art .glass { width: 78%; height: auto; color: var(--ink); }
+.art::before {
+    content: "";
+    position: absolute;
+    left: 50%; top: calc(50% - 6px);
+    width: 84%; aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border: 1px dashed currentColor;
+    border-radius: 50%;
+    opacity: 0.45;
+}
+.art::after {
+    content: "";
+    position: absolute;
+    inset: 12px 12px 30px;
+    background:
+        linear-gradient(currentColor, currentColor) center / 1px 100% no-repeat,
+        linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat;
+    opacity: 0.2;
+}
+.art .glass { position: relative; z-index: 1; width: 70%; height: auto; color: var(--ink); }
 .ink .art .glass { color: var(--on-ink); }
-.fig { position: absolute; left: 12px; bottom: 9px; font-size: 0.65rem; color: var(--muted); }
+.fig { z-index: 1; position: absolute; left: 12px; bottom: 9px; font-size: 0.65rem; color: var(--muted); }
 .ink .fig { color: var(--on-ink-soft); }
 
 .card-body { min-width: 0; }
@@ -333,7 +352,8 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
     .strip { grid-template-columns: 1fr 92px; }
     .cell-moon { display: none; }
     .cell-legend { border-right: 1px solid var(--ink); }
-    .rail svg { width: 20px; }
+    .rail svg { max-width: 40px; }
+    .rail { padding: 10px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
     .ticker-track, .moon, .holo-bar, .hero h1 span:last-child { animation: none; }
