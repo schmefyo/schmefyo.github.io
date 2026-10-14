@@ -1,16 +1,16 @@
-/* Speakeasy, not startup: ivory paper and candlelit ink, brass hairlines,
+/* Speakeasy, not startup: ivory paper and near-black ink, copper hairlines,
    condensed sans headings (Barlow Condensed) with Spectral text, wide-set small caps for anything that labels.
-   Brass is for lines and ornaments; text uses the darker "brass-ink" so it stays readable. */
+   Copper is for lines and ornaments; text uses the darker "brass-ink" so it stays readable. */
 :root {
     --ivory: #f3eee4;
-    --ink: #15110e;
-    --ink-soft: #3a312a;
-    --muted: #6b5f52;
-    --brass: #a8854f;        /* hairlines, ornaments */
-    --brass-ink: #7d5f31;    /* small text on ivory */
-    --brass-lit: #c9a46a;    /* small text and lines on ink */
-    --on-ink: #f6efe2;
-    --on-ink-soft: #cfc5b3;
+    --ink: #141414;
+    --ink-soft: #373430;
+    --muted: #67625b;
+    --brass: #b5703c;        /* hairlines, ornaments */
+    --brass-ink: #92501f;    /* small text on ivory */
+    --brass-lit: #e8884a;    /* small text and lines on ink */
+    --on-ink: #f4f1ec;
+    --on-ink-soft: #cdc8c0;
     --coral: #e9735f;        /* one nod to Flowcrate */
 
     --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
@@ -80,8 +80,8 @@ a:focus-visible { outline: 1px solid var(--brass); outline-offset: 4px; }
 .topbar {
     margin: 0;
     padding: 11px 16px;
-    background: #0d0a08;
-    color: #e6dccb;
+    background: #0a0a0a;
+    color: #e4e0d8;
     text-align: center;
     font-size: 11.5px;
     letter-spacing: 0.22em;
@@ -106,7 +106,7 @@ a:focus-visible { outline: 1px solid var(--brass); outline-offset: 4px; }
     color: var(--on-ink);
     overflow: hidden;
     background:
-        radial-gradient(ellipse 80% 70% at 50% 42%, #2b1d13 0%, #1a130d 45%, #110d0a 100%);
+        radial-gradient(ellipse 80% 70% at 50% 42%, #262626 0%, #181818 45%, #0f0f0f 100%);
 }
 
 .trails { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -134,7 +134,7 @@ h1 {
     line-height: 1.02;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #f8f1e4;
+    color: #f7f4ee;
     text-wrap: balance;
 }
 
@@ -146,7 +146,7 @@ h1 {
     letter-spacing: 0.28em;
     text-transform: uppercase;
     line-height: 1.5;
-    color: #ddd2bd;
+    color: #ddd8cf;
 }
 .hero-sub span { display: block; }
 .hero-sub span + span { margin-top: 10px; }
@@ -216,7 +216,7 @@ h1 {
     color: var(--muted);
     text-align: center;
 }
-.ingredients.on-dark { color: #a79d8c; }
+.ingredients.on-dark { color: #a19d96; }
 .ingredients.center { margin: 44px 0 30px; }
 
 /* ---------- Links ---------- */
@@ -239,11 +239,11 @@ h1 {
     max-width: 100%;
     margin: 64px auto 56px;
     padding: 12px;
-    border: 1px solid rgba(201, 164, 106, 0.55);
+    border: 1px solid rgba(232, 136, 74, 0.55);
     line-height: 0;
 }
 .dark .matte { background: transparent; }
-.light .matte { border-color: rgba(168, 133, 79, 0.6); }
+.light .matte { border-color: rgba(181, 112, 60, 0.6); }
 
 .shot { overflow: hidden; }
 .shot img {
@@ -273,7 +273,7 @@ h1 {
 .work > div {
     position: relative;
     padding-top: 22px;
-    border-top: 1px solid rgba(201, 164, 106, 0.4);
+    border-top: 1px solid rgba(232, 136, 74, 0.4);
 }
 .work .num {
     display: block;
@@ -353,7 +353,7 @@ h1 {
     text-decoration: none;
     color: var(--on-ink-soft);
     padding-bottom: 4px;
-    border-bottom: 1px solid rgba(201, 164, 106, 0.5);
+    border-bottom: 1px solid rgba(232, 136, 74, 0.5);
     transition: color 0.25s, border-color 0.25s;
 }
 .links a:hover { color: var(--brass-lit); border-bottom-color: var(--brass-lit); }
@@ -361,11 +361,11 @@ h1 {
 .foot {
     margin: 0;
     padding: 26px 16px 34px;
-    background: #0d0a08;
+    background: #0a0a0a;
     text-align: center;
     font-size: 11.5px;
     letter-spacing: 0.26em;
-    color: #8f8575;
+    color: #8c8a86;
 }
 .foot p { margin: 0; }
 
