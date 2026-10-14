@@ -198,9 +198,9 @@ h1 {
 
 .note {
     margin: 0 0 18px;
-    font-style: italic;
-    font-size: 21px;
-    line-height: 1.8;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.75;
     color: var(--ink-soft);
 }
 .on-dark .note,
@@ -402,7 +402,7 @@ h1 {
     h1 { letter-spacing: 0.22em; padding-left: 0.22em; }
     .hero-sub { font-size: 11.5px; letter-spacing: 0.2em; }
     .item h2 { letter-spacing: 0.09em; }
-    .note { font-size: 19.5px; }
+    .note { font-size: 18.5px; }
     .work { grid-template-columns: 1fr; gap: 34px; }
     .range { grid-template-columns: 1fr; gap: 38px; }
     .matte { padding: 8px; margin: 48px auto 44px; }
