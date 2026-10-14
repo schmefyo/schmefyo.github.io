@@ -1,5 +1,5 @@
 /* Speakeasy, not startup: ivory paper and candlelit ink, brass hairlines,
-   Marcellus headings with Spectral text, wide-set small caps for anything that labels.
+   condensed sans headings (Barlow Condensed) with Spectral text, wide-set small caps for anything that labels.
    Brass is for lines and ornaments; text uses the darker "brass-ink" so it stays readable. */
 :root {
     --ivory: #f3eee4;
@@ -13,7 +13,7 @@
     --on-ink-soft: #cfc5b3;
     --coral: #e9735f;        /* one nod to Flowcrate */
 
-    --display: "Marcellus", "Cormorant Garamond", Georgia, serif;
+    --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
     --text: "Spectral", Georgia, "Times New Roman", serif;
 }
 
@@ -127,12 +127,12 @@ a:focus-visible { outline: 1px solid var(--brass); outline-offset: 4px; }
 
 h1 {
     margin: 0 0 26px;
-    padding-left: 0.3em;                /* balances the trailing letter-space so it centers optically */
+    padding-left: 0.16em;               /* balances the trailing letter-space so it centers optically */
     font-family: var(--display);
-    font-weight: 400;
-    font-size: clamp(30px, 7vw, 68px);
-    line-height: 1.12;
-    letter-spacing: 0.3em;
+    font-weight: 600;
+    font-size: clamp(42px, 9.6vw, 98px);
+    line-height: 1.02;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #f8f1e4;
     text-wrap: balance;
@@ -189,10 +189,10 @@ h1 {
 .item h2 {
     margin: 0 0 12px;
     font-family: var(--display);
-    font-weight: 400;
-    font-size: clamp(28px, 5vw, 44px);
-    line-height: 1.2;
-    letter-spacing: 0.13em;
+    font-weight: 600;
+    font-size: clamp(32px, 5.4vw, 52px);
+    line-height: 1.08;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 .on-dark h2 { color: var(--on-ink); }
@@ -278,7 +278,7 @@ h1 {
 .work .num {
     display: block;
     margin-bottom: 4px;
-    font-family: var(--display);
+    font-family: var(--text);
     font-style: italic;
     font-weight: 400;
     font-size: 30px;
@@ -315,9 +315,9 @@ h1 {
 .range h3 {
     margin: 0 0 8px;
     font-family: var(--display);
-    font-weight: 400;
-    font-size: 21px;
-    letter-spacing: 0.14em;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 .range .note { margin: 0; font-size: 17px; }
@@ -400,9 +400,9 @@ h1 {
     .band { padding: 80px 20px; }
     .band.tight { padding-top: 10px; }
     .hero { padding: 70px 20px 100px; }
-    h1 { letter-spacing: 0.22em; padding-left: 0.22em; }
+    h1 { letter-spacing: 0.1em; padding-left: 0.1em; }
     .hero-sub { font-size: 11.5px; letter-spacing: 0.2em; }
-    .item h2 { letter-spacing: 0.09em; }
+    .item h2 { letter-spacing: 0.07em; }
     .item + .center-kicker { margin-top: 56px; }
     .note { font-size: 17px; }
     .work { grid-template-columns: 1fr; gap: 34px; }
