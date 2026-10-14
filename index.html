@@ -17,139 +17,191 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Steph Massoud">
     <meta name="twitter:description" content="Senior Technical Program Manager in New York City. Founder of Queer Cocktail Club and Flowcrate. Also: product, UX/UI design, and video production.">
-    <meta name="theme-color" content="#070505">
-    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#15110e">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-    <div class="awning" aria-hidden="true"></div>
 
-    <main class="menu">
+    <p class="topbar">Now pouring &nbsp;&middot;&nbsp; <a href="#flowcrate">Flowcrate, a music discovery app for DJs</a></p>
 
-        <header class="masthead">
-            <svg class="glass" viewBox="0 0 64 64" width="56" height="56" aria-hidden="true" focusable="false">
-                <path d="M10 16h44c0 14-10 24-22 24S10 30 10 16z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M32 40v15M21 55h22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                <circle cx="50" cy="14" r="7" fill="#ff6050" stroke="currentColor" stroke-width="2.5"/>
-                <path d="M50 7v14M43 14h14" stroke="currentColor" stroke-width="1.5"/>
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+        <svg class="trails" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <defs>
+                <linearGradient id="trail" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
+                    <stop offset="0" stop-color="#f2b45f" stop-opacity="0"/>
+                    <stop offset="0.3" stop-color="#f2b45f"/>
+                    <stop offset="0.7" stop-color="#ee8a5a"/>
+                    <stop offset="1" stop-color="#ee8a5a" stop-opacity="0"/>
+                </linearGradient>
+                <filter id="glow" x="-10%" y="-30%" width="120%" height="160%">
+                    <feGaussianBlur stdDeviation="7"/>
+                </filter>
+            </defs>
+            <g class="glowlines" filter="url(#glow)">
+                <path pathLength="1" d="M-50 520 C 180 300, 340 640, 560 430 S 900 180, 1250 360"/>
+                <path pathLength="1" d="M-50 400 C 220 560, 380 220, 620 330 S 940 600, 1250 250"/>
+            </g>
+            <g class="lines">
+                <path pathLength="1" d="M-50 520 C 180 300, 340 640, 560 430 S 900 180, 1250 360"/>
+                <path pathLength="1" d="M-50 400 C 220 560, 380 220, 620 330 S 940 600, 1250 250"/>
+                <path pathLength="1" class="thin" d="M-50 300 C 160 180, 420 420, 640 250 S 960 330, 1250 520"/>
+            </g>
+        </svg>
+
+        <div class="hero-inner">
+            <svg class="glass" viewBox="0 0 64 64" width="44" height="44" aria-hidden="true" focusable="false">
+                <path d="M10 16h44c0 14-10 24-22 24S10 30 10 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M32 40v15M21 55h22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="50" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/>
             </svg>
-            <p class="eyebrow">New York City &nbsp;/&nbsp; Open late</p>
             <h1>Steph Massoud</h1>
-            <p class="subtitle">Senior Technical Program Manager <span class="bar">|</span> Founder of Queer Cocktail Club &amp; Flowcrate</p>
-            <p class="welcome">Pull up a stool. Here&rsquo;s what&rsquo;s on the menu.</p>
-        </header>
+            <p class="hero-sub">
+                <span>Senior Technical Program Manager</span>
+                <span>Founder of Queer Cocktail Club &amp; Flowcrate</span>
+            </p>
+        </div>
+        <span class="cue" aria-hidden="true"></span>
+    </header>
 
-        <section class="course" aria-labelledby="sig">
-            <h2 id="sig" class="course-title">The Signature</h2>
-            <article class="drink">
-                <h3>
-                    <span class="name">Technical Program Management</span>
-                    <span class="leader" aria-hidden="true"></span>
-                    <span class="tag">Senior &middot; Tech/Media</span>
-                </h3>
+    <main>
+
+        <!-- ============ INTRO + SIGNATURE ============ -->
+        <section class="band light">
+            <div class="intro">
+                <p>Program manager by trade, host by habit, builder by curiosity. Pull up a stool &mdash; here&rsquo;s what&rsquo;s on the menu.</p>
+            </div>
+
+            <svg class="orn" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true" focusable="false">
+                <path d="M10 16h44c0 14-10 24-22 24S10 30 10 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M32 40v15M21 55h22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+
+            <article class="item">
+                <p class="kicker">The Signature</p>
+                <h2>Technical Program Management</h2>
+                <p class="descriptor">Senior &nbsp;&middot;&nbsp; Tech &amp; Media</p>
                 <p class="note">The day job. I take big, cross-functional work across tech and media and make it legible: who&rsquo;s doing what, what&rsquo;s at risk, and what ships next.</p>
-                <p class="ingredients"><span class="label">Ingredients</span> Roadmaps &middot; Cross-team alignment &middot; Risks &amp; dependencies &middot; Technical depth &middot; Clear communication</p>
+                <p class="ingredients">Roadmaps &nbsp;&middot;&nbsp; Cross-team alignment &nbsp;&middot;&nbsp; Risks &amp; dependencies &nbsp;&middot;&nbsp; Technical depth &nbsp;&middot;&nbsp; Clear communication</p>
             </article>
         </section>
 
-        <section class="course" aria-labelledby="seasonal">
-            <h2 id="seasonal" class="course-title">The Seasonal Special</h2>
-            <article class="drink flow">
-                <h3>
-                    <span class="name">Flowcrate</span>
-                    <span class="leader" aria-hidden="true"></span>
-                    <span class="tag">Founder &middot; Builder</span>
-                </h3>
-                <p class="tagline">Dig deeper. Save what you find. Follow the thread.</p>
+        <!-- ============ FLOWCRATE ============ -->
+        <section class="band dark" id="flowcrate">
+            <div class="wide">
+                <article class="item on-dark">
+                    <p class="kicker">The Seasonal Special</p>
+                    <h2>Flowcrate</h2>
+                    <p class="descriptor">Founder &nbsp;&middot;&nbsp; Builder</p>
+                </article>
 
-                <a class="shot" href="https://www.flowcrate.co" target="_blank" rel="noopener" aria-label="Visit Flowcrate (opens in a new tab)">
+                <a class="matte shot" href="https://www.flowcrate.co" target="_blank" rel="noopener" aria-label="Visit Flowcrate (opens in a new tab)">
                     <img src="assets/flowcrate.jpg" width="1200" height="630" loading="lazy"
                          alt="Flowcrate: Discover music. Save tracks. Organize crates.">
                 </a>
 
-                <p class="note">A music discovery app for DJs and the people who dig. Start from a DJ you trust or a set you love, follow the connections outward, and save what you find into crates you can actually use.</p>
+                <div class="item on-dark">
+                    <p class="note">A music discovery app for DJs and the people who dig. Start from a DJ you trust or a set you love, follow the connections outward, and save what you find into crates you can actually use.</p>
+                </div>
 
-                <h4 class="sub">What I did</h4>
+                <p class="kicker center-kicker">What I did</p>
                 <dl class="work">
                     <div>
+                        <span class="num" aria-hidden="true">I</span>
                         <dt>Product</dt>
                         <dd>Defined the core loop: discover, save, organize, explore connections. Scoped what ships and what waits, and wrote the plans before the big builds.</dd>
                     </div>
                     <div>
+                        <span class="num" aria-hidden="true">II</span>
                         <dt>Build</dt>
                         <dd>Designed and built it end to end: sign-in and password recovery, DJ and artist following, a personal library, crates, CSV export, and the privacy and terms pages.</dd>
                     </div>
                     <div>
+                        <span class="num" aria-hidden="true">III</span>
                         <dt>Data</dt>
                         <dd>Connected tracks to the sets and DJs that played them, so you can see where a record has been played. Enriches tracks with BPM, key, genre and label.</dd>
                     </div>
                     <div>
+                        <span class="num" aria-hidden="true">IV</span>
                         <dt>Process</dt>
                         <dd>Runs it like a product team of one: staging before production, a release checklist for every ship, a written decision log, and automated tests covering the code and the browser.</dd>
                     </div>
                 </dl>
 
-                <p class="ingredients"><span class="label">Ingredients</span> React &middot; TypeScript &middot; TanStack &middot; Tailwind &middot; Supabase &middot; Vercel</p>
-                <p class="cta"><a href="https://www.flowcrate.co" target="_blank" rel="noopener">Visit flowcrate.co &rarr;</a></p>
-            </article>
-        </section>
-
-        <section class="course" aria-labelledby="house">
-            <h2 id="house" class="course-title">The House Special</h2>
-            <article class="drink">
-                <h3>
-                    <span class="name">Queer Cocktail Club</span>
-                    <span class="leader" aria-hidden="true"></span>
-                    <span class="tag">Founder</span>
-                </h3>
-                <p class="note">A community first, a bar crawl second. Social events built around cocktail and mixology education, fostering and building LGBTQIA+ community in New York.</p>
-                <p class="ingredients"><span class="label">Ingredients</span> Event design &middot; Community &middot; Mixology education &middot; Hospitality</p>
-                <p class="cta"><a href="https://www.instagram.com/queercocktailclub/" target="_blank" rel="noopener">Follow @queercocktailclub &rarr;</a></p>
-            </article>
-        </section>
-
-        <section class="course" aria-labelledby="back">
-            <h2 id="back" class="course-title">From the Back Bar</h2>
-            <p class="course-sub">The range behind the pour.</p>
-            <div class="backbar">
-                <article class="drink small">
-                    <h3><span class="name">Product Management</span></h3>
-                    <p class="note">Deciding what to build, and why.</p>
-                </article>
-                <article class="drink small">
-                    <h3><span class="name">UX/UI Design</span></h3>
-                    <p class="note">Making things make sense on screen.</p>
-                </article>
-                <article class="drink small">
-                    <h3><span class="name">Video Production</span></h3>
-                    <p class="note">Telling the story in motion.</p>
-                </article>
-                <article class="drink small">
-                    <h3><span class="name">Technical Support</span></h3>
-                    <p class="note">Where I learned how people really use things.</p>
-                </article>
+                <p class="ingredients on-dark center">React &nbsp;&middot;&nbsp; TypeScript &nbsp;&middot;&nbsp; TanStack &nbsp;&middot;&nbsp; Tailwind &nbsp;&middot;&nbsp; Supabase &nbsp;&middot;&nbsp; Vercel</p>
+                <p class="center"><a class="link accent" href="https://www.flowcrate.co" target="_blank" rel="noopener">Visit flowcrate.co</a></p>
             </div>
         </section>
 
-        <section class="course last-call" aria-labelledby="last">
-            <h2 id="last" class="course-title">Last Call</h2>
-            <p class="note">Got a project, a role, or a drink recommendation? Say hello.</p>
-            <p><a href="mailto:stephanie.ranya@gmail.com" class="button" id="contact">Contact</a></p>
-            <nav class="links" aria-label="Elsewhere">
-                <a href="https://www.linkedin.com/in/stephmassoud/" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://www.instagram.com/queercocktailclub/" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://soundcloud.com/schmef" target="_blank" rel="noopener">On the jukebox</a>
-            </nav>
+        <!-- ============ QUEER COCKTAIL CLUB ============ -->
+        <section class="band light" id="club">
+            <div class="mid">
+                <article class="item">
+                    <p class="kicker">The House Special</p>
+                    <h2>Queer Cocktail Club</h2>
+                    <p class="descriptor">Founder</p>
+                    <p class="note">A community first, a bar crawl second. Social events built around cocktail and mixology education, fostering and building LGBTQIA+ community in New York.</p>
+                    <p class="ingredients">Event design &nbsp;&middot;&nbsp; Community &nbsp;&middot;&nbsp; Mixology education &nbsp;&middot;&nbsp; Hospitality</p>
+                </article>
+
+                <p class="kicker center-kicker">Lately, at the club</p>
+                <div class="matte ig">
+                    <iframe src="https://www.instagram.com/queercocktailclub/embed/"
+                            title="Recent posts from Queer Cocktail Club on Instagram"
+                            loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+                <p class="center"><a class="link" href="https://www.instagram.com/queercocktailclub/" target="_blank" rel="noopener">Follow @queercocktailclub</a></p>
+            </div>
         </section>
 
-        <footer class="foot">
-            <p>&copy; Steph Massoud &middot; Made in New York City</p>
-        </footer>
+        <!-- ============ BACK BAR ============ -->
+        <section class="band light tight" id="range">
+            <div class="mid">
+                <p class="kicker center-kicker">From the Back Bar</p>
+                <p class="lede">The range behind the pour.</p>
+                <div class="range">
+                    <article>
+                        <h3>Product Management</h3>
+                        <p class="note">Deciding what to build, and why.</p>
+                    </article>
+                    <article>
+                        <h3>UX/UI Design</h3>
+                        <p class="note">Making things make sense on screen.</p>
+                    </article>
+                    <article>
+                        <h3>Video Production</h3>
+                        <p class="note">Telling the story in motion.</p>
+                    </article>
+                    <article>
+                        <h3>Technical Support</h3>
+                        <p class="note">Where I learned how people really use things.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
+        <!-- ============ LAST CALL ============ -->
+        <section class="band dark last" id="contact">
+            <div class="mid">
+                <p class="kicker">Last Call</p>
+                <p class="note big">Got a project, a role, or a drink recommendation? Say hello.</p>
+                <p><a href="mailto:stephanie.ranya@gmail.com" class="button">Contact</a></p>
+                <nav class="links" aria-label="Elsewhere">
+                    <a href="https://www.linkedin.com/in/stephmassoud/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.instagram.com/queercocktailclub/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://soundcloud.com/schmef" target="_blank" rel="noopener">On the jukebox</a>
+                </nav>
+            </div>
+        </section>
     </main>
+
+    <footer class="foot">
+        <p>&copy; Steph Massoud &nbsp;&middot;&nbsp; New York City</p>
+    </footer>
+
 </body>
 </html>
