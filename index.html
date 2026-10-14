@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steph Massoud</title>
     <link rel="canonical" href="https://stephmassoud.com/">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <meta name="description" content="Steph Massoud is a Senior Technical Program Manager from New York City working in the tech/media industry, and the founder of Queer Cocktail Club and Flowcrate. Steph has also worked in product management, technical support, UX/UI design, and video production.">
 
@@ -17,98 +19,285 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Steph Massoud">
     <meta name="twitter:description" content="Senior Technical Program Manager in New York City. Founder of Queer Cocktail Club and Flowcrate. Also: product, UX/UI design, and video production.">
-    <meta name="theme-color" content="#141414">
+    <meta name="theme-color" content="#111111">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261014" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20261014b" type="text/css">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+        <!-- Cocktail glassware, drawn as one-weight line art. Colour comes from the parent via currentColor. -->
 
-    <p class="topbar">Now pouring &nbsp;&middot;&nbsp; <a href="#flowcrate">Flowcrate, a music discovery app for DJs</a></p>
-
-    <!-- ============ HERO ============ -->
-    <header class="hero">
-        <svg class="trails" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-            <defs>
-                <linearGradient id="trail" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
-                    <stop offset="0" stop-color="#f59a4a" stop-opacity="0"/>
-                    <stop offset="0.3" stop-color="#f59a4a"/>
-                    <stop offset="0.7" stop-color="#ee6f3a"/>
-                    <stop offset="1" stop-color="#ee6f3a" stop-opacity="0"/>
-                </linearGradient>
-                <filter id="glow" x="-10%" y="-30%" width="120%" height="160%">
-                    <feGaussianBlur stdDeviation="7"/>
-                </filter>
-            </defs>
-            <g class="glowlines" filter="url(#glow)">
-                <path pathLength="1" d="M-50 520 C 180 300, 340 640, 560 430 S 900 180, 1250 360"/>
-                <path pathLength="1" d="M-50 400 C 220 560, 380 220, 620 330 S 940 600, 1250 250"/>
+        <symbol id="g-coupe" viewBox="0 0 80 100">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 28 H70 C70 50 56 62 40 62 C24 62 10 50 10 28 Z"/>
+                <path d="M13 36 H67"/>
+                <path d="M40 62 V90"/>
+                <ellipse cx="40" cy="92" rx="16" ry="3"/>
+                <circle cx="64" cy="24" r="9"/>
+                <circle cx="64" cy="24" r="6" stroke-width="1.4"/>
+                <path d="M64 15.5 V32.5 M55.5 24 H72.5" stroke-width="1.4"/>
+                <path d="M20 8 V16 M16 12 H24" stroke-width="1.6"/>
             </g>
-            <g class="lines">
-                <path pathLength="1" d="M-50 520 C 180 300, 340 640, 560 430 S 900 180, 1250 360"/>
-                <path pathLength="1" d="M-50 400 C 220 560, 380 220, 620 330 S 940 600, 1250 250"/>
-                <path pathLength="1" class="thin" d="M-50 300 C 160 180, 420 420, 640 250 S 960 330, 1250 520"/>
-            </g>
-        </svg>
+        </symbol>
 
-        <div class="hero-inner">
-            <svg class="glass" viewBox="0 0 64 64" width="44" height="44" aria-hidden="true" focusable="false">
-                <path d="M10 16h44c0 14-10 24-22 24S10 30 10 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M32 40v15M21 55h22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="50" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-            <h1>Steph Massoud</h1>
-            <p class="hero-sub">
-                <span>Senior Technical Program Manager</span>
-                <span>Founder of Queer Cocktail Club &amp; Flowcrate</span>
-            </p>
+        <symbol id="g-martini" viewBox="0 0 80 100">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 24 H72 L40 62 Z"/>
+                <path d="M17 34 H63"/>
+                <path d="M40 62 V90"/>
+                <ellipse cx="40" cy="92" rx="16" ry="3"/>
+                <path d="M60 6 L46 42"/>
+                <ellipse cx="47" cy="40" rx="5.5" ry="4.5" transform="rotate(-20 47 40)"/>
+                <circle cx="46" cy="40" r="1.6" stroke-width="1.4"/>
+            </g>
+        </symbol>
+
+        <symbol id="g-highball" viewBox="0 0 80 100">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 14 H57 L53.5 90 H26.5 Z"/>
+                <path d="M24.5 32 H55.5"/>
+                <rect x="29" y="38" width="13" height="13" rx="2" transform="rotate(-9 35.5 44.5)"/>
+                <rect x="38" y="54" width="13" height="13" rx="2" transform="rotate(11 44.5 60.5)"/>
+                <path d="M47 4 L41 70" stroke-width="3"/>
+                <circle cx="34" cy="78" r="1.8" stroke-width="1.4"/>
+                <circle cx="45" cy="80" r="1.3" stroke-width="1.4"/>
+                <circle cx="39" cy="70" r="1.2" stroke-width="1.4"/>
+            </g>
+        </symbol>
+
+        <!-- rocks glass with a vinyl record where the ice would be -->
+        <symbol id="g-rocks" viewBox="0 0 80 100">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 30 H67 L62 88 H18 Z"/>
+                <path d="M14.5 44 H65.5"/>
+                <path d="M19.5 80 H60.5" stroke-width="1.4"/>
+                <circle cx="40" cy="62" r="17"/>
+                <circle cx="40" cy="62" r="12.5" stroke-width="1.1"/>
+                <circle cx="40" cy="62" r="9" stroke-width="1.1"/>
+                <circle cx="40" cy="62" r="4.5"/>
+                <circle cx="40" cy="62" r="1" fill="currentColor" stroke="none"/>
+                <path d="M56 24 C66 12 78 22 69 30 C65 33 61 29 64 26"/>
+            </g>
+        </symbol>
+
+        <symbol id="g-flute" viewBox="0 0 80 100">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30.5 6 H49.5 L47.5 56 C47 65 33 65 32.5 56 Z"/>
+                <path d="M31.2 20 H48.8"/>
+                <path d="M40 65 V90"/>
+                <ellipse cx="40" cy="92" rx="14" ry="3"/>
+                <circle cx="38" cy="32" r="1.6" stroke-width="1.4"/>
+                <circle cx="43" cy="42" r="1.3" stroke-width="1.4"/>
+                <circle cx="39" cy="50" r="1.7" stroke-width="1.4"/>
+                <circle cx="42.5" cy="27" r="1.1" stroke-width="1.4"/>
+                <path d="M62 14 V22 M58 18 H66" stroke-width="1.6"/>
+            </g>
+        </symbol>
+
+        <symbol id="g-tulip" viewBox="0 0 80 100">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M26 10 C19 30 24 52 40 57 C56 52 61 30 54 10 Z"/>
+                <path d="M22 30 Q31 26 40 30 T58 30"/>
+                <circle cx="40" cy="43" r="8"/>
+                <path d="M40 57 V89"/>
+                <ellipse cx="40" cy="91" rx="15" ry="3"/>
+            </g>
+        </symbol>
+
+        <symbol id="g-nick" viewBox="0 0 80 100">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 20 H62 C64 42 54 60 40 60 C26 60 16 42 18 20 Z"/>
+                <path d="M19.5 32 H60.5"/>
+                <path d="M40 60 V90"/>
+                <ellipse cx="40" cy="92" rx="15" ry="3"/>
+                <path d="M62 4 L50 40"/>
+                <circle cx="49.5" cy="41" r="5"/>
+                <path d="M49.5 36 C49 33 52 31 54 31" stroke-width="1.4"/>
+            </g>
+        </symbol>
+
+        <symbol id="g-shaker" viewBox="0 0 80 100">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M36 16 C36 6 44 6 44 16"/>
+                <path d="M30 16 H50 L52 30 H28 Z"/>
+                <path d="M26 30 H54 L50 90 H30 Z"/>
+                <path d="M27.5 48 H52.5" stroke-width="1.4"/>
+                <path d="M29 70 H51" stroke-width="1.4"/>
+                <circle cx="35" cy="23" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="40" cy="23" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="45" cy="23" r="1" fill="currentColor" stroke="none"/>
+                <path d="M12 38 L19 42 M10 56 L18 56 M12 74 L19 70" stroke-width="1.6"/>
+                <path d="M68 38 L61 42 M70 56 L62 56 M68 74 L61 70" stroke-width="1.6"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker">
+        <div class="ticker-track" aria-hidden="true">
+            <span>Now pouring: Flowcrate</span><span>Music discovery for DJs</span><span>Open late</span><span>New York City</span><span>Queer Cocktail Club</span><span>Follow @queercocktailclub</span>
+            <span>Now pouring: Flowcrate</span><span>Music discovery for DJs</span><span>Open late</span><span>New York City</span><span>Queer Cocktail Club</span><span>Follow @queercocktailclub</span>
         </div>
-        <span class="cue" aria-hidden="true"></span>
+        <p class="sr-only">Now pouring: Flowcrate, music discovery for DJs. Open late in New York City.</p>
+    </div>
+
+    <!-- ============ HERO: THE LABEL ============ -->
+    <header class="hero">
+        <div class="sheet">
+            <i class="x tl"></i><i class="x tr"></i><i class="x bl"></i><i class="x br"></i>
+
+            <div class="hero-top">
+                <div class="hero-text">
+                    <p class="mono">Portfolio &nbsp;/&nbsp; Menu Vol. 01</p>
+                    <h1><span>Steph</span><span>Massoud</span></h1>
+                    <dl class="specs">
+                        <div><dt>Role</dt><dd>Senior Technical Program Manager</dd></div>
+                        <div><dt>Founder</dt><dd>Queer Cocktail Club</dd></div>
+                        <div><dt>Founder</dt><dd>Flowcrate</dd></div>
+                        <div><dt>Base</dt><dd>New York City</dd></div>
+                    </dl>
+                </div>
+
+                <figure class="diagram-wrap">
+                    <svg class="diagram" viewBox="0 0 380 470" role="img" aria-label="Technical diagram of a coupe cocktail glass with a holographic pour">
+                        <defs>
+                            <linearGradient id="holo" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#ff9ad5"/>
+                                <stop offset="0.25" stop-color="#ffd36e"/>
+                                <stop offset="0.5" stop-color="#8ff0d0"/>
+                                <stop offset="0.75" stop-color="#8fb0ff"/>
+                                <stop offset="1" stop-color="#e5a0ff"/>
+                            </linearGradient>
+                            <clipPath id="bowl"><path d="M10 28 H70 C70 50 56 62 40 62 C24 62 10 50 10 28 Z"/></clipPath>
+                        </defs>
+
+                        <circle cx="190" cy="235" r="150" class="disc"/>
+                        <path class="thin dash" d="M8 135 H372 M171 14 V452"/>
+
+                        <g transform="translate(35 40) scale(3.4)">
+                            <rect x="0" y="36" width="80" height="40" fill="url(#holo)" clip-path="url(#bowl)"/>
+                            <path d="M13 40 L40 58 M25 38 L50 56" stroke="#fff" stroke-width="0.5" opacity="0.7" fill="none" clip-path="url(#bowl)"/>
+                            <g class="line" fill="none" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 28 H70 C70 50 56 62 40 62 C24 62 10 50 10 28 Z"/>
+                                <path d="M13 36 H67"/>
+                                <path d="M40 62 V90"/>
+                                <ellipse cx="40" cy="92" rx="16" ry="3"/>
+                                <circle cx="64" cy="24" r="9"/>
+                                <circle cx="64" cy="24" r="6" stroke-width="0.5"/>
+                                <path d="M64 15.5 V32.5 M55.5 24 H72.5" stroke-width="0.5"/>
+                            </g>
+                        </g>
+
+                        <path class="thin" d="M69 76 H273 M69 68 V84 M273 68 V84"/>
+                        <path class="thin dash" d="M69 84 V135 M273 84 V135"/>
+                        <path class="thin" d="M171 57 V76"/>
+                        <circle cx="171" cy="48" r="9" class="tag"/><text x="171" y="48" class="lbl">A</text>
+
+                        <path class="thin" d="M82 215 H49"/>
+                        <circle cx="40" cy="215" r="9" class="tag"/><text x="40" y="215" class="lbl">B</text>
+                        <path class="thin" d="M171 300 H305"/>
+                        <circle cx="314" cy="300" r="9" class="tag"/><text x="314" y="300" class="lbl">C</text>
+                        <path class="thin" d="M225 353 H305"/>
+                        <circle cx="314" cy="353" r="9" class="tag"/><text x="314" y="353" class="lbl">D</text>
+                        <path class="thin" d="M283 122 H305"/>
+                        <circle cx="314" cy="122" r="9" class="tag"/><text x="314" y="122" class="lbl">E</text>
+
+                        <g class="thin reg-mark">
+                            <circle cx="24" cy="24" r="6"/><path d="M13 24 H35 M24 13 V35"/>
+                            <circle cx="356" cy="24" r="6"/><path d="M345 24 H367 M356 13 V35"/>
+                            <circle cx="24" cy="446" r="6"/><path d="M13 446 H35 M24 435 V457"/>
+                            <circle cx="356" cy="446" r="6"/><path d="M345 446 H367 M356 435 V457"/>
+                        </g>
+                        <text x="190" y="460" class="cap">FIG. 01</text>
+                    </svg>
+                </figure>
+            </div>
+
+            <div class="strip">
+                <div class="cell cell-moon"><span class="moon" aria-hidden="true"></span></div>
+                <div class="cell cell-legend">
+                    <p class="mono">Fig. 01 &mdash; Coupe, diagrammed</p>
+                    <ul>
+                        <li><b>A</b> Rim</li>
+                        <li><b>B</b> Bowl</li>
+                        <li><b>C</b> Stem</li>
+                        <li><b>D</b> Base</li>
+                        <li><b>E</b> Garnish</li>
+                    </ul>
+                </div>
+                <div class="cell cell-no">
+                    <p class="mono">Menu Vol.</p>
+                    <p class="big-no">01</p>
+                    <span class="hazard" aria-hidden="true"></span>
+                </div>
+                <div class="cell cell-bar" aria-hidden="true"><span class="barcode"></span><p class="mono">SM &middot; 0001</p></div>
+            </div>
+        </div>
     </header>
 
     <main>
 
         <!-- ============ INTRO + SIGNATURE ============ -->
-        <section class="band light">
-            <div class="intro">
-                <p>Program manager by trade, host by habit, builder by curiosity. Pull up a stool &mdash; here&rsquo;s what&rsquo;s on the menu.</p>
+        <section class="band paper">
+            <div class="wrap">
+                <p class="intro">Program manager by trade, host by habit, builder by curiosity. Pull up a stool, here&rsquo;s what&rsquo;s on the menu.</p>
+
+                <div class="rail" aria-hidden="true">
+                    <svg viewBox="0 0 80 100"><use href="#g-coupe"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-martini"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-highball"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-rocks"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-flute"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-tulip"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-nick"/></svg>
+                </div>
+
+                <article class="card">
+                    <div class="art"><i class="x tl"></i><i class="x br"></i>
+                        <svg class="glass" viewBox="0 0 80 100" aria-hidden="true"><use href="#g-coupe"/></svg>
+                        <span class="fig">Fig. 02</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="kicker">01 &mdash; The Signature</p>
+                        <h2>Technical Program Management</h2>
+                        <p class="chips"><span class="chip">Senior</span><span class="chip">Tech &amp; Media</span></p>
+                        <p class="note">The day job. I take big, cross-functional work across tech and media and make it legible: who&rsquo;s doing what, what&rsquo;s at risk, and what ships next.</p>
+                        <p class="ingr">Roadmaps <i>/</i> Cross-team alignment <i>/</i> Risks &amp; dependencies <i>/</i> Technical depth <i>/</i> Clear communication</p>
+                    </div>
+                </article>
             </div>
-
-            <svg class="orn" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true" focusable="false">
-                <path d="M10 16h44c0 14-10 24-22 24S10 30 10 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M32 40v15M21 55h22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-
-            <article class="item">
-                <p class="kicker">The Signature</p>
-                <h2>Technical Program Management</h2>
-                <p class="descriptor">Senior &nbsp;&middot;&nbsp; Tech &amp; Media</p>
-                <p class="note">The day job. I take big, cross-functional work across tech and media and make it legible: who&rsquo;s doing what, what&rsquo;s at risk, and what ships next.</p>
-                <p class="ingredients">Roadmaps &nbsp;&middot;&nbsp; Cross-team alignment &nbsp;&middot;&nbsp; Risks &amp; dependencies &nbsp;&middot;&nbsp; Technical depth &nbsp;&middot;&nbsp; Clear communication</p>
-            </article>
         </section>
 
         <!-- ============ FLOWCRATE ============ -->
-        <section class="band dark" id="flowcrate">
-            <div class="wide">
-                <article class="item on-dark">
-                    <p class="kicker">The Seasonal Special</p>
-                    <h2>Flowcrate</h2>
-                    <p class="descriptor">Founder &nbsp;&middot;&nbsp; Builder</p>
+        <section class="band ink" id="flowcrate">
+            <div class="wrap">
+                <article class="card">
+                    <div class="art"><i class="x tl"></i><i class="x br"></i>
+                        <svg class="glass" viewBox="0 0 80 100" aria-hidden="true"><use href="#g-rocks"/></svg>
+                        <span class="fig">Fig. 03</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="kicker">02 &mdash; The Seasonal Special</p>
+                        <h2>Flowcrate</h2>
+                        <p class="chips"><span class="chip">Founder</span><span class="chip">Builder</span></p>
+                        <p class="note">A music discovery app for DJs and the people who dig. Start from a DJ you trust or a set you love, follow the connections outward, and save what you find into crates you can actually use.</p>
+                    </div>
                 </article>
 
-                <a class="matte shot" href="https://www.flowcrate.co" target="_blank" rel="noopener" aria-label="Visit Flowcrate (opens in a new tab)">
+                <a class="frame shot" href="https://www.flowcrate.co" target="_blank" rel="noopener" aria-label="Visit Flowcrate (opens in a new tab)">
+                    <i class="x tl"></i><i class="x tr"></i><i class="x bl"></i><i class="x br"></i>
                     <img src="assets/flowcrate.jpg" width="1200" height="630" loading="lazy"
                          alt="Flowcrate: Discover music. Save tracks. Organize crates.">
                 </a>
+                <p class="mono cap-line">Fig. 04 &mdash; flowcrate.co</p>
 
-                <div class="item on-dark">
-                    <p class="note">A music discovery app for DJs and the people who dig. Start from a DJ you trust or a set you love, follow the connections outward, and save what you find into crates you can actually use.</p>
-                </div>
-
-                <p class="kicker center-kicker">What I did</p>
+                <h3 class="sub">What I did</h3>
                 <dl class="work">
                     <div>
                         <span class="num" aria-hidden="true">I</span>
@@ -132,62 +321,96 @@
                     </div>
                 </dl>
 
-                <p class="ingredients on-dark center">React &nbsp;&middot;&nbsp; TypeScript &nbsp;&middot;&nbsp; TanStack &nbsp;&middot;&nbsp; Tailwind &nbsp;&middot;&nbsp; Supabase &nbsp;&middot;&nbsp; Vercel</p>
-                <p class="center"><a class="link accent" href="https://www.flowcrate.co" target="_blank" rel="noopener">Visit flowcrate.co</a></p>
+                <p class="ingr">React <i>/</i> TypeScript <i>/</i> TanStack <i>/</i> Tailwind <i>/</i> Supabase <i>/</i> Vercel</p>
+                <p><a class="button" href="https://www.flowcrate.co" target="_blank" rel="noopener">Visit flowcrate.co</a></p>
             </div>
         </section>
 
         <!-- ============ QUEER COCKTAIL CLUB ============ -->
-        <section class="band light" id="club">
-            <div class="mid">
-                <article class="item">
-                    <p class="kicker">The House Special</p>
-                    <h2>Queer Cocktail Club</h2>
-                    <p class="descriptor">Founder</p>
-                    <p class="note">Community first, cocktails close behind. Social events built around cocktail and mixology education, fostering and building LGBTQIA+ community in New York.</p>
-                    <p class="ingredients">Event design &nbsp;&middot;&nbsp; Community &nbsp;&middot;&nbsp; Mixology education &nbsp;&middot;&nbsp; Hospitality</p>
+        <section class="band paper" id="club">
+            <div class="wrap">
+                <article class="card">
+                    <div class="art"><i class="x tl"></i><i class="x br"></i>
+                        <svg class="glass" viewBox="0 0 80 100" aria-hidden="true"><use href="#g-shaker"/></svg>
+                        <span class="fig">Fig. 05</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="kicker">03 &mdash; The House Special</p>
+                        <h2>Queer Cocktail Club</h2>
+                        <p class="chips"><span class="chip">Founder</span></p>
+                        <p class="note">Community first, cocktails close behind. Social events built around cocktail and mixology education, fostering and building LGBTQIA+ community in New York.</p>
+                        <p class="ingr">Event design <i>/</i> Community <i>/</i> Mixology education <i>/</i> Hospitality</p>
+                    </div>
                 </article>
 
-                <p class="kicker center-kicker">Lately, at the club</p>
-                <div class="matte ig">
+                <span class="hazard big" aria-hidden="true"></span>
+
+                <p class="mono cap-line ig-cap">Fig. 06 &mdash; Lately, at the club</p>
+                <div class="frame ig">
+                    <i class="x tl"></i><i class="x tr"></i><i class="x bl"></i><i class="x br"></i>
                     <iframe src="https://www.instagram.com/queercocktailclub/embed/"
                             title="Recent posts from Queer Cocktail Club on Instagram"
                             loading="lazy" scrolling="no" allowtransparency="true"></iframe>
                 </div>
-                <p class="center"><a class="link" href="https://www.instagram.com/queercocktailclub/" target="_blank" rel="noopener">Follow @queercocktailclub</a></p>
+                <p><a class="link" href="https://www.instagram.com/queercocktailclub/" target="_blank" rel="noopener">Follow @queercocktailclub</a></p>
             </div>
         </section>
 
         <!-- ============ BACK BAR ============ -->
-        <section class="band light tight" id="range">
-            <div class="mid">
-                <p class="kicker center-kicker">From the Back Bar</p>
+        <section class="band paper tight" id="range">
+            <div class="wrap">
+                <div class="rail" aria-hidden="true">
+                    <svg viewBox="0 0 80 100"><use href="#g-nick"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-tulip"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-flute"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-rocks"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-highball"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-martini"/></svg>
+                    <svg viewBox="0 0 80 100"><use href="#g-coupe"/></svg>
+                </div>
+
+                <p class="kicker">04 &mdash; From the Back Bar</p>
                 <p class="lede">The range behind the pour.</p>
+
                 <div class="range">
-                    <article>
-                        <h3>Product Management</h3>
-                        <p class="note">Deciding what to build, and why.</p>
+                    <article class="mini">
+                        <svg class="glass" viewBox="0 0 80 100" aria-hidden="true"><use href="#g-martini"/></svg>
+                        <div>
+                            <h3>Product Management</h3>
+                            <p class="note">Deciding what to build, and why.</p>
+                        </div>
                     </article>
-                    <article>
-                        <h3>UX/UI Design</h3>
-                        <p class="note">Making things make sense on screen.</p>
+                    <article class="mini">
+                        <svg class="glass" viewBox="0 0 80 100" aria-hidden="true"><use href="#g-flute"/></svg>
+                        <div>
+                            <h3>UX/UI Design</h3>
+                            <p class="note">Making things make sense on screen.</p>
+                        </div>
                     </article>
-                    <article>
-                        <h3>Video Production</h3>
-                        <p class="note">Telling the story in motion.</p>
+                    <article class="mini">
+                        <svg class="glass" viewBox="0 0 80 100" aria-hidden="true"><use href="#g-tulip"/></svg>
+                        <div>
+                            <h3>Video Production</h3>
+                            <p class="note">Telling the story in motion.</p>
+                        </div>
                     </article>
-                    <article>
-                        <h3>Technical Support</h3>
-                        <p class="note">Where I learned how people really use things.</p>
+                    <article class="mini">
+                        <svg class="glass" viewBox="0 0 80 100" aria-hidden="true"><use href="#g-nick"/></svg>
+                        <div>
+                            <h3>Technical Support</h3>
+                            <p class="note">Where I learned how people really use things.</p>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- ============ LAST CALL ============ -->
-        <section class="band dark last" id="contact">
-            <div class="mid">
-                <p class="kicker">Last Call</p>
+        <section class="band ink last" id="contact">
+            <div class="holo-bar" aria-hidden="true"></div>
+            <div class="wrap">
+                <p class="kicker">05 &mdash; Last Call</p>
+                <p class="last-title" aria-hidden="true">Last call</p>
                 <p class="note big">Got a project, a role, or a drink recommendation? Say hello.</p>
                 <p><a href="mailto:stephanie.ranya@gmail.com" class="button">Contact</a></p>
                 <nav class="links" aria-label="Elsewhere">
@@ -195,13 +418,21 @@
                     <a href="https://www.instagram.com/queercocktailclub/" target="_blank" rel="noopener">Instagram</a>
                     <a href="https://soundcloud.com/schmef" target="_blank" rel="noopener">On the decks</a>
                 </nav>
+                <span class="hazard big light" aria-hidden="true"></span>
+                <div class="foot">
+                    <p>&copy; <span id="yr">2026</span> Steph Massoud &nbsp;/&nbsp; New York City</p>
+                    <span class="barcode small" aria-hidden="true"></span>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="foot">
-        <p>&copy; Steph Massoud &nbsp;&middot;&nbsp; New York City</p>
-    </footer>
-
+    <script>
+        // Keep the copyright year current without anyone editing the page.
+        (function () {
+            var el = document.getElementById('yr');
+            if (el) { el.textContent = new Date().getFullYear(); }
+        })();
+    </script>
 </body>
 </html>
