@@ -65,6 +65,7 @@ a:focus-visible { outline: 1px solid var(--brass); outline-offset: 4px; }
 .on-dark .kicker,
 .dark .kicker { color: var(--brass-lit); }
 .center-kicker { margin-top: 0; }
+.item + .center-kicker { margin-top: 76px; }   /* breathing room after a menu entry */
 
 .descriptor {
     margin: 0 0 24px;
@@ -402,6 +403,7 @@ h1 {
     h1 { letter-spacing: 0.22em; padding-left: 0.22em; }
     .hero-sub { font-size: 11.5px; letter-spacing: 0.2em; }
     .item h2 { letter-spacing: 0.09em; }
+    .item + .center-kicker { margin-top: 56px; }
     .note { font-size: 18.5px; }
     .work { grid-template-columns: 1fr; gap: 34px; }
     .range { grid-template-columns: 1fr; gap: 38px; }
