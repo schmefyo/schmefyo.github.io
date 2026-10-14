@@ -1,113 +1,305 @@
-html {
-    font-family: 'Avenir', 'Nunito', 'Hind', sans-serif;
-    color: #fff;
+/* Palette: cream paper, deep ink, and the original lime as the accent.
+   Lime is used for fills and stripes, never for body text on cream (too low contrast). */
+:root {
+    --paper: #f6f0e2;
+    --ink: #1d2b1f;
+    --ink-soft: #46534a;
+    --lime: #adca6d;
+    --leaf: #4a6a1f;      /* readable green for small text on paper */
+    --rule: rgba(29, 43, 31, 0.35);
 }
 
-body {
-    background: #adca6d;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #17211a;
+        --ink: #f3ecda;
+        --ink-soft: #b9c2b4;
+        --leaf: #adca6d;
+        --rule: rgba(243, 236, 218, 0.35);
+    }
 }
 
 @font-face {
     font-family: "futur-demi";
-    src: url("https://schmefyo.github.io/futur-demi.otf") format("opentype");
-    
+    src: url("futur-demi.otf") format("opentype");
+    font-display: swap;
 }
 
-#content {
-    position: relative;
-    height: 100%;
+* { box-sizing: border-box; }
+
+html {
+    font-family: 'Hind', 'Avenir', 'Nunito', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-text-size-adjust: 100%;
 }
 
-#card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#name {
-    display: inline-block;
-    font-size: 57px;
-    font-family: "futur-demi", 'Futura', 'Hind', sans-serif;
-    line-height: 1em;
-    margin-top: 0;
-    font-style: normal;
-    text-transform: none;
-    letter-spacing: -0.01em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    margin-bottom: 16px;
-}
-
-#title {
+body {
     margin: 0;
-    font-weight: 400;
-    font-style: normal;
-    font-family: 'Avenir', 'Nunito', sans-serif;
-    font-size: 16px;
-    line-height: 1.4em;
-    text-transform: none;
-    letter-spacing: -0.02em;
-    color: rgba(255,255,255,.8);
+    background: var(--paper);
+    font-size: 17px;
+    line-height: 1.55;
 }
 
-#contact {
-    background: #fff;
-    color: #222;
-    border-style: none;
-    text-align: center;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 14px;
+/* Bar awning: lime and paper stripes across the top */
+.awning {
+    height: 34px;
+    background: repeating-linear-gradient(90deg, var(--lime) 0 44px, var(--paper) 44px 88px);
+    border-bottom: 3px solid var(--ink);
+}
+
+.menu {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 40px;
+}
+
+/* ---------- Masthead ---------- */
+.masthead { text-align: center; margin-bottom: 56px; }
+
+.glass { color: var(--ink); margin-bottom: 8px; }
+
+.eyebrow {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    letter-spacing: .1em;
-    padding-top: 1em;
-    padding-right: calc(1.44em - .1em);
-    padding-bottom: 1em;
-    padding-left: 1.44em;
-    text-decoration: none;
-    display: inline-block;
+    color: var(--leaf);
 }
 
-#links {
-    margin-top: 30px;
+h1 {
+    font-family: "futur-demi", 'Futura', 'Hind', sans-serif;
+    font-weight: normal;
+    font-size: clamp(44px, 10vw, 84px);
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+    color: var(--ink);
+}
+
+.subtitle {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+}
+.subtitle .bar { color: var(--leaf); padding: 0 0.35em; }
+
+.welcome {
+    margin: 0;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--ink-soft);
+}
+
+/* ---------- Courses ---------- */
+.course { margin-bottom: 48px; }
+
+.course-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 22px;
+    font-family: "futur-demi", 'Futura', 'Hind', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+.course-title::before,
+.course-title::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    height: 5px;
+}
+
+.course-sub {
+    margin: -10px 0 22px;
+    text-align: center;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    color: var(--ink-soft);
+}
+
+/* ---------- Drinks ---------- */
+.drink h3 {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 6px;
+    font-family: "futur-demi", 'Futura', 'Hind', sans-serif;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 1.15;
+}
+
+.drink .leader {
+    flex: 1;
+    min-width: 20px;
+    border-bottom: 2px dotted var(--rule);
+    transform: translateY(-5px);
+    transition: border-color 0.25s;
+}
+
+.drink .tag {
+    font-family: 'Hind', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--leaf);
     white-space: nowrap;
 }
 
-.icons {
-    position: relative;
-    white-space: nowrap;
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
-    margin-left: 1em;
+.note {
+    margin: 0 0 10px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--ink);
 }
 
-.ir {
-    overflow: visible;
-    padding: 0 0 0 0;
-    position: relative;
-    height: 100%;
-    width: 100%;
+.ingredients {
+    margin: 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+}
+.ingredients .label {
     display: inline-block;
+    margin-right: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--leaf);
 }
 
-.icon-wrapper {
-    width: 28px;
-    height: 28px;
-    padding: 2px;
-    color: #fff;
-    fill: #fff;
-    position: relative;
+/* House special sits on a lime card so it reads as the star */
+.drink.feature {
+    background: var(--lime);
+    color: #1d2b1f;
+    padding: 24px 26px;
+    border: 2px solid #1d2b1f;
+    box-shadow: 6px 6px 0 #1d2b1f;
+}
+.drink.feature .tag,
+.drink.feature .ingredients,
+.drink.feature .ingredients .label { color: #1d2b1f; }
+.drink.feature .note { color: #1d2b1f; }
+.drink.feature .leader { border-bottom-color: rgba(29, 43, 31, 0.5); }
+
+.cta { margin: 14px 0 0; }
+.cta a {
+    color: #1d2b1f;
+    font-weight: 700;
     text-decoration: none;
+    border-bottom: 2px solid #1d2b1f;
+}
+.cta a:hover { border-bottom-color: transparent; }
+
+/* Back bar grid */
+.backbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 36px;
+}
+.drink.small h3 { font-size: 21px; margin-bottom: 4px; }
+.drink.small .note { font-size: 16px; margin: 0; }
+
+/* ---------- Last call ---------- */
+.last-call { text-align: center; }
+.last-call .note { font-size: 20px; margin-bottom: 20px; }
+
+.button {
     display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 16px 30px;
+    border: 2px solid var(--ink);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.button:hover,
+.button:focus-visible {
+    background: var(--lime);
+    color: #1d2b1f;
+    transform: translateY(-2px);
 }
 
-.icon-wrapper:hover {
-    border-radius: 100%;
-    color: #0e1a25;
-    fill: #0e1a25;
-    transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
-    transition: background-color 0.5s, transform 0.5s ease-out;
-    transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+.links {
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+}
+.links a {
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--lime);
+    padding-bottom: 2px;
+}
+.links a:hover { border-bottom-color: var(--ink); }
+
+.foot {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+}
+.foot p { margin: 0; }
+
+a:focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px;
+}
+
+/* ---------- Motion (skipped for people who ask for less) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+    .masthead > *,
+    .course {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: rise 0.6s ease-out forwards;
+    }
+    .masthead > :nth-child(2) { animation-delay: 0.05s; }
+    .masthead > :nth-child(3) { animation-delay: 0.12s; }
+    .masthead > :nth-child(4) { animation-delay: 0.2s; }
+    .masthead > :nth-child(5) { animation-delay: 0.28s; }
+    .course:nth-of-type(1) { animation-delay: 0.35s; }
+    .course:nth-of-type(2) { animation-delay: 0.45s; }
+    .course:nth-of-type(3) { animation-delay: 0.55s; }
+    .course:nth-of-type(4) { animation-delay: 0.65s; }
+
+    .drink:not(.feature):hover .leader { border-bottom-color: var(--leaf); }
+    .drink.feature { transition: transform 0.2s, box-shadow 0.2s; }
+    .drink.feature:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 #1d2b1f; }
+}
+
+@keyframes rise {
+    to { opacity: 1; transform: none; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 560px) {
+    body { font-size: 16px; }
+    .menu { padding: 40px 20px 32px; }
+    .drink h3 { flex-wrap: wrap; font-size: 23px; }
+    .drink .leader { display: none; }
+    .drink .tag { flex-basis: 100%; }
+    .drink.feature { padding: 20px 18px; box-shadow: 4px 4px 0 #1d2b1f; }
+    .backbar { grid-template-columns: 1fr; gap: 20px; }
 }
