@@ -174,8 +174,9 @@ a { color: inherit; }
 .cell-legend ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.68rem; }
 .cell-legend b { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; border: 1px solid var(--ink); border-radius: 50%; margin-right: 6px; font-weight: 500; }
 .cell-no { text-align: center; display: flex; flex-direction: column; justify-content: space-between; gap: 4px; }
-.big-no { margin: 0; font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 0.9; color: var(--muted); }
-.cell-no .hazard { height: 6px; opacity: 0.35; }
+.big-no { margin: 0; font-family: var(--display); font-weight: 500; font-size: 1.05rem; line-height: 1; color: var(--muted); opacity: 0.8; }
+.cell-no .hazard { height: 3px; opacity: 0.18; }
+.intro-kicker { margin: 0 0 18px; }
 .cell-bar { display: flex; flex-direction: column; justify-content: center; gap: 6px; }
 .cell-bar .mono { text-align: center; font-size: 0.65rem; }
 
@@ -239,7 +240,7 @@ a { color: inherit; }
     opacity: 0.2;
 }
 .art .glass { position: relative; z-index: 1; width: 70%; height: auto; color: var(--ink); }
-.ink .art .glass { color: var(--on-ink); }
+.ink .art .glass { color: var(--on-ink); --gb: var(--ink); }
 .fig { z-index: 1; position: absolute; left: 12px; bottom: 9px; font-size: 0.525rem; color: var(--muted); }
 .ink .fig { color: var(--on-ink-soft); }
 
@@ -285,18 +286,19 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .link:hover { color: var(--hot-ink); }
 
 /* ---------- flowcrate carousel ---------- */
-.carousel { padding: 10px 10px 0; }
+.carousel { padding: 10px 10px 0; --coral: #f26f5b; }
+@supports (color: oklch(70% .2 29)) { .carousel { --coral: oklch(70% .2 29); } }
 .carousel .slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .carousel .slides::-webkit-scrollbar { display: none; }
-.carousel .slides:focus-visible { outline: 2px solid var(--hot); outline-offset: 4px; }
+.carousel .slides:focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; }
 .carousel .slide { flex: 0 0 100%; margin: 0; scroll-snap-align: start; }
 .carousel svg { display: block; width: 100%; height: auto; }
 .car-nav { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 14px 0 12px; }
 .car-btn { appearance: none; background: none; border: 1px solid var(--on-ink-soft); color: var(--on-ink); width: 34px; height: 34px; font: inherit; font-size: 0.95rem; cursor: pointer; }
-.car-btn:hover { border-color: var(--hot); color: var(--hot); }
+.car-btn:hover { border-color: var(--coral); color: var(--coral); }
 .car-dots { display: flex; gap: 10px; }
 .car-dots button { appearance: none; width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 1px solid var(--on-ink-soft); background: transparent; cursor: pointer; }
-.car-dots button[aria-current="true"] { background: var(--hot); border-color: var(--hot); }
+.car-dots button[aria-current="true"] { background: var(--coral); border-color: var(--coral); }
 .s-mono { font-family: var(--mono); letter-spacing: 0.12em; }
 .s-lbl { fill: #ece8df; font-size: 18px; }
 .s-dim { fill: #8d897f; font-size: 16px; }
@@ -309,12 +311,20 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .s-bar { fill: #b9b4a8; opacity: 0.6; }
 .s-bar2 { fill: #55524a; }
 .s-disc { fill: #111; stroke: #55524a; stroke-width: 1.5; stroke-dasharray: 3 6; }
-.s-ring { fill: none; stroke: #ff9ad5; stroke-width: 2.5; }
-.s-fill { fill: #ff9ad5; }
+.s-ring { fill: none; stroke: var(--coral); stroke-width: 2.5; }
+.s-fill { fill: var(--coral); }
 .s-tick { fill: none; stroke: #111; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .s-ring2 { fill: none; stroke: #55524a; stroke-width: 1.5; }
 .s-plus { stroke: #b9b4a8; stroke-width: 2; stroke-linecap: round; }
-.s-chip { fill: none; stroke: #ff9ad5; stroke-width: 1.5; }
+.s-chip { fill: none; stroke: #55524a; stroke-width: 1.5; }
+.s-chiptxt { fill: #ece8df; font-size: 14px; letter-spacing: 0.1em; }
+.s-ring3 { fill: none; stroke: #55524a; stroke-width: 1.5; }
+.s-flow { fill: none; stroke: var(--coral); stroke-width: 2; stroke-dasharray: 5 6; }
+.s-flow2 { fill: none; stroke: var(--coral); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.s-crate { fill: #161616; stroke: #b9b4a8; stroke-width: 2; }
+.s-slot { fill: #0c0c0c; stroke: #55524a; stroke-width: 1.5; }
+.s-sleeve { fill: #1d1d1d; stroke: #55524a; stroke-width: 1.5; }
+.s-hot { stroke: var(--coral); }
 
 /* ---------- frames ---------- */
 .frame { position: relative; border: 1.5px solid var(--ink); background: var(--paper-lit); padding: 10px; margin: clamp(44px, 6vw, 72px) 0 12px; display: block; }
