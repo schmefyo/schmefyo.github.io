@@ -286,8 +286,7 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .link:hover { color: var(--hot-ink); }
 
 /* ---------- flowcrate carousel ---------- */
-.car-wrap { --coral: #f26f5b; }
-@supports (color: oklch(70% .2 29)) { .car-wrap { --coral: oklch(70% .2 29); } }
+.car-wrap { --coral: var(--hot); }
 .carousel { padding: 10px; margin-bottom: 0; }
 .carousel .slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .carousel .slides::-webkit-scrollbar { display: none; }
@@ -452,3 +451,6 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .slide-link { display: block; color: inherit; }
 .car-nav { padding-top: 16px; }
 .s-big2 { fill: #ece8df; font-size: 20.9px; letter-spacing: 0.06em; font-weight: 500; }
+
+/* tighter gap after the club grid + follow button */
+#club { padding-bottom: clamp(8px, 2vw, 24px); }
