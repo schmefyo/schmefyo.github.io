@@ -373,3 +373,14 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 
 .skip { position: absolute; left: 8px; top: -60px; z-index: 10; padding: 10px 14px; background: var(--ink); color: var(--on-ink); font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; }
 .skip:focus { top: 8px; }
+
+/* receipts: proof points under the TPM blurb */
+.mini-kicker { margin: 26px 0 10px; }
+.receipts { margin: 0 0 22px; max-width: 40em; border-top: 1.5px solid var(--ink); }
+.receipts > div { display: grid; grid-template-columns: 11.5em 1fr; gap: 6px 18px; padding: 10px 0; border-bottom: 1px solid var(--ink); }
+.receipts dt { font-size: 0.7rem; line-height: 1.6; }
+.receipts dd { margin: 0; font-size: 0.98rem; line-height: 1.5; }
+.note.open { font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--hot); margin-bottom: 26px; }
+@media (max-width: 560px) {
+    .receipts > div { grid-template-columns: 1fr; }
+}
