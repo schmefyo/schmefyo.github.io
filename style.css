@@ -174,9 +174,8 @@ a { color: inherit; }
 .cell-legend ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.68rem; }
 .cell-legend b { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; border: 1px solid var(--ink); border-radius: 50%; margin-right: 6px; font-weight: 500; }
 .cell-no { text-align: center; display: flex; flex-direction: column; justify-content: space-between; gap: 4px; }
-.big-no { margin: 0; font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 0.9; color: var(--muted); }
-.cell-no .hazard { height: 6px; opacity: 0.35; }
-.intro-kicker { margin: 0 0 18px; }
+.big-no { margin: 0; font-family: var(--display); font-weight: 800; font-size: 1.9rem; line-height: 0.9; color: #3a3832; }
+.cell-no .hazard { height: 10px; opacity: 0.6; }
 .cell-bar { display: flex; flex-direction: column; justify-content: center; gap: 6px; }
 .cell-bar .mono { text-align: center; font-size: 0.65rem; }
 
@@ -294,8 +293,8 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .carousel .slides:focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; }
 .carousel .slide { flex: 0 0 100%; margin: 0; scroll-snap-align: start; }
 .carousel svg { display: block; width: 100%; height: auto; }
-.car-nav { display: flex; align-items: center; gap: 18px; padding: 18px 0 6px; }
-.car-count { margin-left: auto; font-size: 0.72rem; color: var(--on-ink-soft); }
+.car-nav { position: relative; display: flex; align-items: center; justify-content: center; gap: 18px; padding: 18px 0 6px; }
+.car-count { position: absolute; right: 0; top: 50%; margin-top: 6px; transform: translateY(-50%); font-size: 0.72rem; color: var(--on-ink-soft); }
 .car-count b { color: var(--on-ink); font-weight: 500; }
 .car-btn { appearance: none; background: none; border: 1px solid var(--on-ink-soft); color: var(--on-ink); width: 40px; height: 40px; font: inherit; font-size: 0.95rem; cursor: pointer; }
 .car-btn:hover { border-color: var(--coral); color: var(--coral); }
@@ -443,3 +442,5 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .s-ringsq { fill: none; stroke: var(--coral); stroke-width: 2.5; }
 .s-link2 { fill: none; stroke: #55524a; stroke-width: 1.5; }
 .s-bar2f { fill: #55524a; }
+
+@media (max-width: 560px) { .car-count { display: none; } }
