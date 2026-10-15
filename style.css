@@ -45,7 +45,7 @@ a { color: inherit; }
 .mono { font-size: 0.72rem; margin: 0; }
 
 .band { padding: clamp(64px, 9vw, 120px) 0; position: relative; }
-.band.lead { padding-top: 0; }
+.band.lead { padding-top: clamp(24px, 2.5vw, 32px); }
 .band.tight { padding-top: clamp(48px, 7vw, 88px); }
 .wrap { max-width: 980px; margin: 0 auto; padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)); }
 .paper { background: var(--paper); color: var(--ink); }
@@ -96,6 +96,7 @@ a { color: inherit; }
     text-transform: uppercase;
     letter-spacing: 0.16em;
 }
+.tk { display: flex; flex: none; }
 .ticker-track span { padding: 9px 0; white-space: nowrap; }
 .ticker-track span::after { content: "\2733"; color: var(--hot); margin: 0 1.6em; }
 @keyframes tick { to { transform: translateX(-50%); } }
@@ -179,7 +180,7 @@ a { color: inherit; }
 
 /* ---------- intro, rails ---------- */
 .intro {
-    margin: 0 0 clamp(48px, 7vw, 88px);
+    margin: 0 0 clamp(72px, 9.5vw, 120px);
     max-width: 24em;
     font-family: var(--text);
     font-weight: 500;
@@ -358,6 +359,10 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 }
 @media (prefers-reduced-motion: reduce) {
     .ticker-track, .moon, .holo-bar, .hero h1 span:last-child { animation: none; }
+    /* Motion off: show one tidy centered line instead of a cut-off scroller */
+    .ticker-track { display: block; width: auto; }
+    .tk { display: flex; flex: 0 1 auto; flex-wrap: wrap; justify-content: center; padding: 0 var(--gutter); }
+    .tk.dup { display: none; }
     html { scroll-behavior: auto; }
     .shot, .mini .glass { transition: none; }
 }
