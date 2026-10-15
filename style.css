@@ -299,6 +299,8 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .work > div { position: relative; padding: 22px 22px 24px 54px; border-bottom: 1px solid #3a3a37; }
 .work > div:nth-child(odd) { border-right: 1px solid #3a3a37; padding-right: 26px; }
 .work .num { position: absolute; left: 0; top: 20px; font-family: var(--display); font-weight: 800; font-size: 1.3rem; color: var(--hot); line-height: 1; width: 44px; }
+.work > div:nth-child(even) { padding-left: 70px; }
+.work > div:nth-child(even) .num { left: 16px; }
 .work dt { color: var(--on-ink); font-size: 0.8rem; margin-bottom: 8px; }
 .work dd { margin: 0; color: var(--on-ink-soft); font-size: 0.98rem; }
 
@@ -348,6 +350,8 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
     .art { max-width: 190px; }
     .work { grid-template-columns: 1fr; }
     .work > div:nth-child(odd) { border-right: 0; }
+    .work > div:nth-child(even) { padding-left: 54px; }
+    .work > div:nth-child(even) .num { left: 0; }
     .range { grid-template-columns: 1fr; }
     .mini:nth-child(odd) { border-right: 0; }
     .mini:nth-last-child(-n+2) { border-bottom: 1px solid var(--ink); }
