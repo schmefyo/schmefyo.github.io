@@ -457,4 +457,3 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 
 .mini-kicker a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .mini-kicker a:hover, .mini-kicker a:focus-visible { text-decoration-thickness: 2px; }
-.hero-cta { margin: 28px 0 0; }
