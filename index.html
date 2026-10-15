@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261016r" type="text/css">
+    <link rel="stylesheet" href="style.css?v=20261016s" type="text/css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -173,8 +173,8 @@
     <!-- ============ TICKER ============ -->
     <div class="ticker">
         <div class="ticker-track" aria-hidden="true">
-            <div class="tk"><span>Now pouring: Flowcrate</span><span>Music discovery for DJs</span><span>Open late</span><span><a href="mailto:stephanie.ranya@gmail.com" tabindex="-1">Say hello</a></span><span>Brooklyn, NY</span><span>Queer Cocktail Club</span><span>Follow @queercocktailclub</span></div>
-            <div class="tk dup"><span>Now pouring: Flowcrate</span><span>Music discovery for DJs</span><span>Open late</span><span><a href="mailto:stephanie.ranya@gmail.com" tabindex="-1">Say hello</a></span><span>Brooklyn, NY</span><span>Queer Cocktail Club</span><span>Follow @queercocktailclub</span></div>
+            <div class="tk"><span>Now pouring: Flowcrate</span><span>Music discovery for DJs</span><span>Open late</span><span><a href="#contact" tabindex="-1">Say hello</a></span><span>Brooklyn, NY</span><span>Queer Cocktail Club</span><span>Follow @queercocktailclub</span></div>
+            <div class="tk dup"><span>Now pouring: Flowcrate</span><span>Music discovery for DJs</span><span>Open late</span><span><a href="#contact" tabindex="-1">Say hello</a></span><span>Brooklyn, NY</span><span>Queer Cocktail Club</span><span>Follow @queercocktailclub</span></div>
         </div>
         <p class="sr-only">Now pouring: Flowcrate, music discovery for DJs. Open late in Brooklyn, NY.</p>
     </div>
@@ -495,7 +495,19 @@
                 <p class="last-title" aria-hidden="true">Last call</p>
                 <p class="note big">Got a project, a role, or a drink recommendation? Say hello.</p>
                 <p class="note open">Open to new opportunities and collaborations.</p>
-                <p><a href="mailto:stephanie.ranya@gmail.com" class="button">Contact</a></p>
+                <form class="cform" id="contact-form" action="https://formspree.io/f/REPLACE_ME" method="POST" novalidate>
+                    <div class="cf-row">
+                        <label>Name<input type="text" name="name" autocomplete="name" required></label>
+                        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+                    </div>
+                    <label>Message<textarea name="message" rows="5" required></textarea></label>
+                    <input type="text" name="_gotcha" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <div class="cf-actions">
+                        <button type="submit" class="button">Send message</button>
+                        <p class="cf-alt">Prefer email? <a href="mailto:hello@stephmassoud.com">hello@stephmassoud.com</a></p>
+                    </div>
+                    <p class="cf-status" role="status" aria-live="polite"></p>
+                </form>
                 <nav class="links" aria-label="Elsewhere">
                     <a href="https://www.linkedin.com/in/stephmassoud/" target="_blank" rel="noopener">LinkedIn</a>
                     <a href="https://www.instagram.com/queercocktailclub/" target="_blank" rel="noopener">Instagram</a>
@@ -515,6 +527,29 @@
         (function () {
             var el = document.getElementById('yr');
             if (el) { el.textContent = new Date().getFullYear(); }
+        })();
+        // Contact form: send in the background and show a short confirmation.
+        (function () {
+            var f = document.getElementById('contact-form');
+            if (!f || !window.fetch) { return; }
+            var s = f.querySelector('.cf-status'), b = f.querySelector('button');
+            f.addEventListener('submit', function (e) {
+                e.preventDefault();
+                s.className = 'cf-status';
+                if (!f.checkValidity()) { f.reportValidity(); return; }
+                b.disabled = true; s.textContent = 'Sending\u2026';
+                fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+                    .then(function (r) {
+                        if (!r.ok) { throw new Error('bad'); }
+                        f.reset(); s.className = 'cf-status ok';
+                        s.textContent = 'Thanks \u2014 your message is in. I\u2019ll get back to you soon.';
+                    })
+                    .catch(function () {
+                        s.className = 'cf-status err';
+                        s.textContent = 'That didn\u2019t go through. Please try again, or email hello@stephmassoud.com.';
+                    })
+                    .then(function () { b.disabled = false; });
+            });
         })();
     </script>
 <script>
