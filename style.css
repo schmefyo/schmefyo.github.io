@@ -98,6 +98,8 @@ a { color: inherit; }
 }
 .tk { display: flex; flex: none; }
 .ticker-track span { padding: 9px 0; white-space: nowrap; }
+.ticker-track a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
 .ticker-track span::after { content: "\2733"; color: var(--hot); margin: 0 1.6em; }
 @keyframes tick { to { transform: translateX(-50%); } }
 
