@@ -45,6 +45,7 @@ a { color: inherit; }
 .mono { font-size: 0.72rem; margin: 0; }
 
 .band { padding: clamp(64px, 9vw, 120px) 0; position: relative; }
+.band.lead { padding-top: 0; }
 .band.tight { padding-top: clamp(48px, 7vw, 88px); }
 .wrap { max-width: 980px; margin: 0 auto; padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)); }
 .paper { background: var(--paper); color: var(--ink); }
@@ -178,7 +179,7 @@ a { color: inherit; }
 
 /* ---------- intro, rails ---------- */
 .intro {
-    margin: 0 0 clamp(36px, 5vw, 56px);
+    margin: 0 0 clamp(48px, 7vw, 88px);
     max-width: 24em;
     font-family: var(--text);
     font-weight: 500;
