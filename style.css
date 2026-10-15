@@ -238,7 +238,7 @@ a { color: inherit; }
 }
 .art .glass { position: relative; z-index: 1; width: 70%; height: auto; color: var(--ink); }
 .ink .art .glass { color: var(--on-ink); }
-.fig { z-index: 1; position: absolute; left: 12px; bottom: 9px; font-size: 0.65rem; color: var(--muted); }
+.fig { z-index: 1; position: absolute; left: 12px; bottom: 9px; font-size: 0.525rem; color: var(--muted); }
 .ink .fig { color: var(--on-ink-soft); }
 
 .card-body { min-width: 0; }
