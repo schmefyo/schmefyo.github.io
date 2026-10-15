@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261015v" type="text/css">
+    <link rel="stylesheet" href="style.css?v=20261015w" type="text/css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -213,11 +213,14 @@
                                 <stop offset="1" stop-color="#c178e6"/>
                             </linearGradient>
                             <clipPath id="rockbody"><path d="M13 30 H67 L62.5 82 H17.5 Z"/></clipPath>
+                            <mask id="gmask" maskUnits="userSpaceOnUse" x="0" y="0" width="380" height="484"><rect width="380" height="484" fill="#fff"/><circle cx="262.9" cy="122.5" r="36" fill="#000"/></mask>
                             <clipPath id="bowl"><path d="M10 28 H70 C70 50 56 62 40 62 C24 62 10 50 10 28 Z"/></clipPath>
                         </defs>
 
+                        <g mask="url(#gmask)">
                         <circle cx="190" cy="235" r="150" class="disc"/>
                         <path class="thin dash" d="M8 135 H372 M190 14 V436"/>
+                        </g>
 
                         <g transform="translate(54 40) scale(3.4)">
                             <rect x="0" y="36" width="80" height="40" fill="url(#holo)" clip-path="url(#bowl)"/>
@@ -227,14 +230,13 @@
                                 <path d="M13 36 H67"/>
                                 <path d="M40 62 V90"/>
                                 <ellipse cx="40" cy="92" rx="16" ry="3"/>
-                                <circle cx="62.7" cy="24.25" r="9" fill="#e4dfd3"/>
-                                <circle cx="62.7" cy="24.25" r="6" stroke-width="0.6"/>
-                                <path d="M62.7 15.75 V32.75 M54.2 24.25 H71.2" stroke-width="0.6"/>
                             </g>
                         </g>
 
+                        <g mask="url(#gmask)">
                         <path class="thin" d="M88 76 H292 M88 68 V84 M292 68 V84"/>
                         <path class="thin dash" d="M88 84 V135 M292 84 V135"/>
+                        </g>
                         <path class="thin" d="M190 57 V76"/>
                         <circle cx="190" cy="48" r="9" class="tag"/><text x="190" y="48" class="lbl">A</text>
 
@@ -244,8 +246,14 @@
                         <circle cx="336" cy="300" r="9" class="tag"/><text x="336" y="300" class="lbl">C</text>
                         <path class="thin" d="M244 353 H327"/>
                         <circle cx="336" cy="353" r="9" class="tag"/><text x="336" y="353" class="lbl">D</text>
-                        <path class="thin" d="M302.5 122 H327"/>
+                        <path class="thin" d="M297 122.5 H327"/>
                         <circle cx="336" cy="122" r="9" class="tag"/><text x="336" y="122" class="lbl">E</text>
+
+                        <g transform="translate(54 40) scale(3.4)" class="line" fill="none" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="61.43" cy="24.25" r="8.1" fill="#e4dfd3"/>
+                            <circle cx="61.43" cy="24.25" r="5.4" stroke-width="0.6"/>
+                            <path d="M61.43 16.6 V31.9 M53.78 24.25 H69.08" stroke-width="0.6"/>
+                        </g>
 
                         <g class="thin reg-mark">
                             <circle cx="24" cy="24" r="6"/><path d="M13 24 H35 M24 13 V35"/>
