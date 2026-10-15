@@ -278,7 +278,8 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
     clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
     transition: background-color 0.15s, color 0.15s;
 }
-.button:hover { background: transparent; color: var(--hot); }
+.button:hover { background: var(--ink); color: var(--hot); border-color: var(--ink); }
+.ink .button:hover { background: transparent; color: var(--hot); border-color: var(--hot); }
 .link { font-size: 0.78rem; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 .link:hover { color: var(--hot-ink); }
 
