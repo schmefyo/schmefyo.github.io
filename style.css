@@ -1,6 +1,6 @@
 /* Spec-sheet label edition.
    Greige paper, black ink, one hot orange. Mono caps for anything that labels,
-   Archivo (extra-wide) for shouting, Spectral for the quiet voice.
+   Archivo (extra-wide) for shouting, Source Serif 4 for the quiet voice.
    Crosshairs, FIG. captions, hazard stripes, barcodes, one holographic pour. */
 :root {
     --paper: #d9d4c7;
@@ -14,7 +14,7 @@
     --on-ink-soft: #b9b4a8;
     --display: "Archivo", "Arial Black", Arial, sans-serif;
     --mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-    --text: "Spectral", Georgia, serif;
+    --text: "Source Serif 4", Georgia, serif;
     --gutter: clamp(18px, 5vw, 56px);
 }
 
