@@ -174,7 +174,7 @@ a { color: inherit; }
 .cell-legend ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.68rem; }
 .cell-legend b { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; border: 1px solid var(--ink); border-radius: 50%; margin-right: 6px; font-weight: 500; letter-spacing: 0; line-height: 1; padding: 0; }
 .cell-no { text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; }
-.big-no { margin: 0; font-family: var(--display); font-weight: 800; font-size: 1.9rem; line-height: 0.9; color: #3a3832; }
+.big-no { margin: 0; font-family: var(--display); font-weight: 650; font-size: 1.9rem; line-height: 0.9; color: #3a3832; }
 .cell-no .hazard { width: 90px; height: 9px; background: repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 20px); transform: skewX(-45deg); opacity: 0.6; }
 .cell-no .mono, .cell-no .big-no { margin: 0; }
 .cell-bar { display: flex; flex-direction: column; justify-content: center; gap: 6px; }
@@ -295,7 +295,7 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .carousel .slide { flex: 0 0 100%; margin: 0; scroll-snap-align: start; }
 .carousel svg { display: block; width: 100%; height: auto; }
 .car-nav { position: relative; display: flex; align-items: center; justify-content: center; gap: 18px; padding: 18px 0 6px; }
-.car-count { position: absolute; right: 0; top: 50%; margin-top: 6px; transform: translateY(-50%); font-size: 0.72rem; color: var(--on-ink-soft); }
+.car-count { font-size: 0.7rem; color: var(--on-ink-soft); }
 .car-count b { color: var(--on-ink); font-weight: 500; }
 .car-btn { appearance: none; background: none; border: 1px solid var(--on-ink-soft); color: var(--on-ink); width: 40px; height: 40px; font: inherit; font-size: 0.95rem; cursor: pointer; }
 .car-btn:hover { border-color: var(--coral); color: var(--coral); }
@@ -444,8 +444,9 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .s-link2 { fill: none; stroke: #55524a; stroke-width: 1.5; }
 .s-bar2f { fill: #55524a; }
 
-@media (max-width: 560px) { .car-count { display: none; } }
 
 .car-cap { margin: 0; padding-top: 2px; }
+.car-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.slide-link { display: block; color: inherit; }
 .car-nav { padding-top: 16px; }
-.s-big2 { fill: #ece8df; font-size: 22px; letter-spacing: 0.06em; font-weight: 500; }
+.s-big2 { fill: #ece8df; font-size: 20.9px; letter-spacing: 0.06em; font-weight: 500; }
