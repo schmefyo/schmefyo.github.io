@@ -175,7 +175,7 @@ a { color: inherit; }
 .cell-legend b { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; border: 1px solid var(--ink); border-radius: 50%; margin-right: 6px; font-weight: 500; letter-spacing: 0; line-height: 1; padding: 0; }
 .cell-no { text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; }
 .big-no { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 1.71rem; line-height: 0.9; color: #3a3832; position: relative; top: -3px; }
-.cell-no .hazard { width: 90px; max-width: calc(100% - 28px); height: 9px; background: linear-gradient(90deg, var(--ink) 0 50%, transparent 50%) 0 0 / 16px 100% space; transform: skewX(-45deg); opacity: 0.6; }
+.cell-no .hazard { width: 90px; width: calc(round(down, min(90px, 100%) - 10px, 20px) + 10px); max-width: 100%; height: 9px; background: repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 20px); transform: skewX(-45deg); opacity: 0.6; }
 .cell-no .mono, .cell-no .big-no { margin: 0; }
 .cell-bar { display: flex; flex-direction: column; justify-content: center; gap: 6px; }
 .cell-bar .mono { text-align: center; font-size: 0.65rem; }
