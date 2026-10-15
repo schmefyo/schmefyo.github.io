@@ -1,6 +1,6 @@
 /* Spec-sheet label edition.
    Greige paper, black ink, one hot orange. Mono caps for anything that labels,
-   Archivo (extra-wide) for shouting, Source Serif 4 for the quiet voice.
+   Archivo (extra-wide) for shouting, Newsreader for the quiet voice.
    Crosshairs, FIG. captions, hazard stripes, barcodes, one holographic pour. */
 :root {
     --paper: #d9d4c7;
@@ -14,7 +14,7 @@
     --on-ink-soft: #b9b4a8;
     --display: "Archivo", "Arial Black", Arial, sans-serif;
     --mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-    --text: "Source Serif 4", Georgia, serif;
+    --text: "Newsreader", Georgia, serif;
     --gutter: clamp(18px, 5vw, 56px);
 }
 
@@ -182,12 +182,12 @@ a { color: inherit; }
 .intro {
     margin: 0 0 clamp(72px, 9.5vw, 120px);
     max-width: 24em;
-    font-family: var(--display, "Archivo"), "Helvetica Neue", Arial, sans-serif;
-    font-weight: 600;
-    font-stretch: 100%;
-    font-size: clamp(1.45rem, 3.4vw, 2.2rem);
-    line-height: 1.2;
-    letter-spacing: -0.015em;
+    font-family: var(--text);
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
     text-wrap: balance;
 }
 .rail {
