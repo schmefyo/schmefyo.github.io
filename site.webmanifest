@@ -1,0 +1,8 @@
+{
+  "name": "Steph Massoud",
+  "short_name": "Steph",
+  "icons": [{ "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }],
+  "theme_color": "#111111",
+  "background_color": "#d9d4c7",
+  "display": "browser"
+}

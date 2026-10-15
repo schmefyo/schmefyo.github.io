@@ -19,7 +19,7 @@
 }
 
 * { box-sizing: border-box; }
-h1, h2, h3, .intro, .lede, .big-no, .last-title, .work .num { font-stretch: 125%; }
+h1, h2, h3, .lede, .big-no, .last-title, .work .num { font-stretch: 125%; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
     margin: 0;
@@ -179,12 +179,12 @@ a { color: inherit; }
 /* ---------- intro, rails ---------- */
 .intro {
     margin: 0 0 clamp(36px, 5vw, 56px);
-    max-width: 22em;
-    font-family: var(--display);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: clamp(1.3rem, 3.3vw, 2.2rem);
-    line-height: 1.12;
+    max-width: 24em;
+    font-family: var(--text);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3.6vw, 2.3rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
     text-wrap: balance;
 }
 .rail {
@@ -360,3 +360,6 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
     html { scroll-behavior: auto; }
     .shot, .mini .glass { transition: none; }
 }
+
+.skip { position: absolute; left: 8px; top: -60px; z-index: 10; padding: 10px 14px; background: var(--ink); color: var(--on-ink); font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; }
+.skip:focus { top: 8px; }
