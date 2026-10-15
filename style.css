@@ -292,8 +292,8 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .cap-line { margin: 0 0 22px; font-size: 0.7rem; color: var(--muted); }
 .ink .cap-line { color: var(--on-ink-soft); }
 .ig-cap { margin-bottom: 18px; margin-top: 0; }
-.frame.ig { margin-top: 0; margin-bottom: 28px; max-width: 784px; }
-.btn-row { margin-top: 28px; }
+.frame.ig { margin-top: 0; margin-bottom: 44px; max-width: 784px; }
+.btn-row { margin-top: 44px; }
 .frame.ig iframe { display: block; width: 100%; height: calc(min(100vw - 74px, 734px) * 0.667 + 200px); border: 0; background: #fff; }
 
 /* ---------- work list ---------- */
