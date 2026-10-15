@@ -174,7 +174,7 @@ a { color: inherit; }
 .cell-legend ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.68rem; }
 .cell-legend b { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; border: 1px solid var(--ink); border-radius: 50%; margin-right: 6px; font-weight: 500; letter-spacing: 0; line-height: 1; padding: 0; }
 .cell-no { text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; }
-.big-no { margin: 0; font-family: var(--display); font-weight: 650; font-size: 1.9rem; line-height: 0.9; color: #3a3832; }
+.big-no { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 1.8rem; line-height: 0.9; color: #3a3832; }
 .cell-no .hazard { width: 90px; height: 9px; background: repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 20px); transform: skewX(-45deg); opacity: 0.6; }
 .cell-no .mono, .cell-no .big-no { margin: 0; }
 .cell-bar { display: flex; flex-direction: column; justify-content: center; gap: 6px; }
@@ -428,7 +428,7 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; text-transform: u
 .skip:focus { top: 8px; }
 
 /* receipts: proof points under the TPM blurb */
-.mini-kicker { margin: 26px 0 10px; }
+.mini-kicker { margin: 26px 0 18px; }
 .receipts { margin: 0 0 22px; max-width: 40em; border-top: 1.5px solid var(--ink); }
 .receipts > div { display: grid; grid-template-columns: 11.5em 1fr; gap: 6px 18px; padding: 10px 0; border-bottom: 1px solid var(--ink); }
 .receipts dt { font-size: 0.7rem; line-height: 1.6; }
