@@ -197,6 +197,7 @@ a { color: inherit; }
     margin-bottom: clamp(36px, 5vw, 60px);
     border-block: 1.5px solid var(--ink);
 }
+.rail { --gb: var(--paper); }
 .rail svg { width: 100%; max-width: 60px; height: auto; color: var(--ink); }
 .ink .rail { border-color: var(--on-ink); }
 
