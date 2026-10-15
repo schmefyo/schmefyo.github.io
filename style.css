@@ -141,8 +141,8 @@ a { color: inherit; }
 
 .diagram-wrap { margin: 0; min-width: 0; }
 .diagram { width: 100%; height: auto; display: block; color: var(--ink); overflow: visible; }
-.diagram .disc { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 2 5; }
-.diagram .thin { fill: none; stroke: var(--ink); stroke-width: 1; }
+.diagram .disc { fill: none; stroke: var(--muted); stroke-width: 0.9; stroke-dasharray: 2 6; opacity: 0.7; }
+.diagram .thin { fill: none; stroke: var(--muted); stroke-width: 0.9; }
 .diagram .dash { stroke-dasharray: 4 4; }
 .diagram .line { stroke: var(--ink); }
 .diagram .tag { fill: var(--paper-lit); stroke: var(--ink); stroke-width: 1.2; }
